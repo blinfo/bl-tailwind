@@ -1,0 +1,414 @@
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/preflight";
+ */
+@tailwind preflight;
+
+/**
+  * This injects any component classes registered by plugins.
+  *
+  * If using `postcss-import`, use this import instead:
+  *
+  * @import "tailwindcss/components";
+  */
+@tailwind components;
+
+.border-thin {
+  @apply w-full border-b border-bl-blue-light py-2;
+}
+@screen md {
+  .border-thin {
+    @apply border-black;
+  }
+}
+
+/** FORM-ELEMENTS
+  The .bl-input and .bl-select is automatically set to width full. You need to wrap a div around it to set the width of the actual input.
+**/
+
+.bl-input {
+  @apply .block appearance-none w-full rounded text-black text-base leading-tight bg-white opacity-75 pl-2 pr-6 py-2;
+}
+.bl-input:focus {
+  @apply .outline-none border-bl-blue-light;
+}
+@screen md {
+  .bl-input {
+    @apply .text-lg border border-bl-grey;
+  }
+}
+
+.bl-label {
+  @apply .block tracking-wide truncate text-bl-grey text-xs leading-normal;
+}
+@screen md {
+  .bl-label {
+    @apply .text-base text-bl-grey-darkest tracking-normal;
+  }
+}
+/** To use this the element needs to be wrapped around a div with position relative */
+.bl-label-arrow {
+  @apply .pointer-events-none absolute pin-y pin-r flex items-center px-2 text-black;
+}
+
+.bl-select {
+  @apply .block h-10 appearance-none w-full rounded text-black text-base bg-white opacity-75 pl-2 pr-6 py-2;
+}
+@screen md {
+  .bl-select {
+    @apply .border border-bl-grey;
+  }
+}
+
+/**
+  BUTTONS
+  .bl-button is the "shell" of the button. Then you apply the styling you perfer, eg. .bl-button-primary or .bl-button-secondary
+  **/
+.bl-button {
+  @apply .uppercase .text-xs .font-medium .items-center .h-10 .w-32 .py-1 .rounded-sm .my-2 .border-2 .border-transparent;
+}
+.bl-button:disabled {
+  @apply .opacity-50 .cursor-not-allowed;
+}
+.bl-button-primary {
+  @apply .bg-bl-yellow .text-black;
+}
+.bl-button-primary:hover {
+  @apply border-bl-blue;
+}
+.bl-button-secondary {
+  @apply .bg-bl-blue-light .text-black;
+}
+.bl-button-checkbox {
+  @apply .rounded-full .border .flex .items-center .justify-center;
+}
+.bl-body-text {
+  @apply .text-sm .font-body-text .leading-semi-tight;
+}
+
+.bl-blue-gradient {
+  background: linear-gradient(
+      193.04deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 55.87%
+    ),
+    var(--blblue-color);
+}
+
+@tailwind utilities;
+
+:root {
+  --blblue-color: #0d3952;
+  --blgrey-color: #f2f2f2;
+  --bllightblue-color: #58a3be;
+  --blyellow-color: #f39d2d;
+  --blmargin-margin-top: 50px 0px 0px 0px;
+  --blmargin-margin-left-top: 50px 0px 0px 50px;
+  --blmargin-margin-left: 0px 0px 0px 50px;
+  --blmargin-margin-left-bottom: 0px 0px 50px 50px;
+  --blgridgap-grid-gap: 15px;
+}
+
+* {
+  margin: 0px;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+#mB {
+  position: fixed;
+  bottom: 0;
+  z-index: 9;
+}
+
+.mat-drawer-container {
+  background-color: unset;
+}
+
+.mat-drawer-content {
+  overflow: unset;
+}
+
+.form-component {
+  width: 50%;
+  font-size: 2em;
+  margin-top: 0.8em;
+  margin-left: 0.8em;
+}
+
+/*.form-component:nth-child(2) .mat-form-field-underline {
+  width: 100%;
+}*/
+
+.wrapper-content {
+  display: grid;
+  grid-template-columns: 1fr repeat(10, 2fr) 1fr;
+  grid-template-rows: 1fr repeat(4, 2fr) 1fr;
+  grid-auto-flow: dense;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.wrapper-item {
+  display: grid;
+  grid-template-columns: 1fr repeat(10, 2fr) 1fr;
+  grid-template-rows: 1fr repeat(4, 2fr) 1fr;
+  grid-column: 2 / span 10;
+  grid-row: 2 / span 4;
+}
+
+.material-icons {
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.mat-row {
+  padding: 0 15px !important;
+}
+
+.mat-header-cell:first-child {
+  padding: 0 !important;
+}
+
+.mat-cell:first-child {
+  padding: 0 !important;
+}
+
+.mat-row:hover {
+  background-color: rgba(211, 211, 211, 0.603);
+}
+
+.mat-header-row {
+  background-color: white;
+  padding: 0 15px !important;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.item {
+  justify-content: center;
+  align-items: center;
+}
+
+.component-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.form-component.search {
+  grid-column: 1;
+  font-size: 1.8em;
+  margin-top: 0em;
+  margin-left: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+.mat-option:hover {
+  color: darkgrey;
+}
+
+.employee-dialog .mat-dialog-container {
+  padding-top: 0px;
+}
+
+.pkey-popup .mat-dialog-container {
+  margin: 15px;
+  width: unset;
+}
+
+.errorSnackBar {
+  background-color: #e3342f;
+  color: white;
+  border: 1px solid #fcebea;
+  text-align: center;
+  font-weight: 400;
+}
+
+.successSnackBar {
+  background-color: #38c172;
+  color: white;
+  border: 1px solid #fcebea;
+  text-align: center;
+  font-weight: 400;
+}
+
+.mat-snack-bar-container {
+  margin: 14px !important;
+}
+
+.mat-content {
+  margin-right: 10px;
+  display: unset !important;
+  flex: unset !important;
+}
+
+/*Ugly fix for centering text in button on AGI*/
+.mat-button-wrapper {
+  padding: 0 !important;
+}
+
+.mat-column-code {
+  flex: 0 0 80px;
+}
+
+.mat-column-label {
+  flex: 0 0 300px;
+}
+
+/*Displaying different colors depending on the state of the form*/
+.ng-valid[required],
+.ng-valid.required,
+.ng-valid[pattern],
+.ng-valid.pattern {
+  border-left: 0.25rem solid config("colors.green");
+}
+
+/*Fix for hideous Material Table focus outline */
+mat-table.mat-table
+  mat-header-cell.mat-header-cell
+  > div.mat-sort-header-container
+  > button.mat-sort-header-button:focus {
+  outline: none;
+}
+
+/* Fix for additional buttons showing up in date-pickers in webkit-browsers */
+input[type="date"]{
+  -webkit-appearance: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  -webkit-appearance: none;
+  color: transparent;
+}
+
+@media (max-width: 768px) {
+  .wrapper-content {
+    background-color: var(--blblue-color);
+  }
+
+  .wrapper-item {
+    grid-column: 1 / -1;
+  }
+
+  /*reduce shadow on content*/
+  .content-container {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+      0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  }
+
+  .mat-table {
+    background-color: var(--blblue-color);
+    color: var(--blgrey-color);
+  }
+
+  .mat-header-row {
+    background-color: var(--blgrey-color);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 0px !important;
+  }
+
+  .mat-row {
+    color: var(--blgrey-color);
+    background-color: rgba(196, 196, 196, 0.6);
+    padding: 0px !important;
+  }
+
+  .mat-row:hover {
+    background-color: inherit !important;
+  }
+
+  .mat-row:nth-child(odd) {
+    background-color: rgba(196, 196, 196, 0.4);
+  }
+
+  .mat-cell {
+    color: white;
+    font-size: 1.2em;
+  }
+
+  .mat-cell:first-child {
+    padding: 0;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .mat-cell:last-child {
+    padding: 0;
+    margin-right: 0.5rem;
+  }
+
+  .mat-header-cell {
+    font-size: 1em;
+    padding: 0;
+  }
+
+  .mat-header-cell:first-child {
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+  }
+
+  .mat-header-cell:last-child {
+    padding: 0 !important;
+    margin-right: 0.5rem !important;
+  }
+
+  .mat-column-dueDate {
+    display: none;
+  }
+
+  .mat-column-paid {
+    flex: 0 0 auto;
+  }
+
+  .mat-input-container label {
+    color: red !important;
+  }
+
+  /* .mat-column-invoiceNumber {
+    max-width: fit-content;
+    margin-right: 1rem;
+  } */
+
+  .mat-form-field-label,
+  .mat-select-value {
+    color: var(--blgrey-color);
+  }
+
+  .mat-option {
+    background-color: var(--blblue-color);
+    color: var(--blgrey-color);
+  }
+  .mat-option:hover {
+    color: var(--blblue-color);
+  }
+
+  .search {
+    color: var(--blgrey-color);
+  }
+
+  /*Ugly fix for AGI-dropdown on contact*/
+  .mat-expansion-panel-body {
+    position: relative;
+  }
+}
+
+
