@@ -83,7 +83,7 @@ let colors = {
   'teal-lightest': '#e8fffe',
 
   'bl-blue': '#0D3952',
-  'bl-blue-light': '#58A3BE',
+  'bl-blue-light': '#D3615D',
   'blue': '#3490dc',
 
   'indigo-darkest': '#191e38',
