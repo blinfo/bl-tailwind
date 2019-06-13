@@ -19,36 +19,30 @@
    * @import "tailwindcss/components";
    */
  @tailwind components;
- 
+
  .border-thin {
-   @apply .w-full border-b border-bl-blue-accent py-2;
+   @apply .w-full border-b border-bl-blue-100 py-2;
  }
- 
+
  /** NAV & SUB-MENU
  **/
- 
+ .sidenav-wrapper.side-nav-expanded {
+   min-width: 240px;
+   max-width: 242px;
+ }
  .nav-menu-items {
-   @apply .flex flex-row min-h-6 items-center text-2xl antialiased font-medium cursor-pointer text-bl-grey no-underline;
+   @apply .flex flex-row min-h-6 items-center text-lg antialiased font-medium cursor-pointer text-bl-grey-500 no-underline;
  }
- @screen md {
-   .nav-menu-items {
-     @apply text-lg;
-   }
- }
- 
+
  .sub-menu-desktop {
-   @apply hidden;
+   @apply .flex flex-row w-full bg-transparent;
  }
- @screen md {
-   .sub-menu-desktop {
-     @apply .flex flex-row h-12 w-full bg-bl-blue shadow bg-white border-t;
-   };
- }
- 
+
+
  .sub-menu-items-desktop {
    @apply .flex flex-col no-underline text-center items-center justify-center;
  }
- 
+
  .sub-menu-mobile {
    @apply .flex justify-center w-full fixed pin-b h-16 bg-white border-t;
  }
@@ -57,87 +51,88 @@
      @apply .hidden border-none;
    }
  }
- 
+
  .sub-menu-items-mobile {
    @apply .flex flex-col font-normal antialiased text-sm text-black opacity-50 no-underline text-center items-center justify-center;
  }
- 
+
  /** FORM-ELEMENTS
    The .bl-input and .bl-select is automatically set to width full. You need to wrap a div around it to set the width of the actual input.
  **/
- 
+
  .bl-input {
-   @apply .block appearance-none w-full rounded text-black text-sm leading-tight bg-bl-blue-accent-light border-bl-blue-accent pl-2 pr-6 py-2;
+   @apply .block appearance-none w-full rounded text-bl-blue-500 text-sm leading-tight bg-bl-background border border-bl-background pl-2 pr-6 py-2;
  }
  .bl-input:focus {
-   @apply .outline-none border-bl-blue-light;
+   @apply .outline-none bg-white border border-bl-blue-light-500;
+ }
+ .bl-input:hover {
+   @apply .opacity-75;
  }
  .bl-input::placeholder {
-   @apply .text-bl-grey
+   @apply .text-bl-blue-400
  }
- @screen md {
-   .bl-input {
-     @apply .border border-bl-blue-accent;
-   }
- }
- 
+
  .bl-checkbox {
-   @apply .block appearance-none rounded border border-bl-grey p-3
+   @apply .block appearance-none rounded border border-bl-grey-500 p-3
  }
  .bl-checkbox:focus {
-   @apply .outline-none border-bl-blue-light;
+   @apply .outline-none border-bl-blue-light-500;
  }
  .bl-checkbox:checked {
-   @apply .bg-bl-blue-light
+   @apply .bg-bl-blue-light-100
  }
- 
+
  .bl-label {
-   @apply .block tracking-wide truncate text-bl-grey-light text-xs leading-normal;
+   @apply .block tracking-wide truncate text-bl-grey-300 text-xs leading-normal;
  }
  @screen md {
    .bl-label {
-     @apply .text-base text-bl-grey tracking-normal;
+     @apply .text-base text-bl-grey-500 tracking-normal;
    }
  }
  /** To use this the element needs to be wrapped around a div with position relative */
  .bl-label-arrow {
    @apply .pointer-events-none absolute pin-y pin-r flex items-center px-2 text-black;
  }
- 
+
  .bl-search-icon {
-   @apply .pointer-events-none absolute pin-y pin-l flex items-center px-2 text-bl-grey;
+   @apply .pointer-events-none absolute pin-y pin-l flex items-center px-2 text-bl-grey-500;
  }
- 
+
  .bl-select {
-   @apply .block h-10 appearance-none w-full rounded text-black text-sm bg-bl-blue-accent-light border border-bl-blue-accent pl-2 pr-6 py-2;
+   @apply .block h-10 appearance-none w-full rounded text-black text-sm bg-bl-background border border-bl-background pl-2 pr-6 py-2;
  }
  .bl-select::placeholder {
-   @apply text-bl-grey
+   @apply text-bl-grey-500;
  }
- 
- 
  /**
    BUTTONS
    .bl-button is the "shell" of the button. Then you apply the styling you perfer, eg. .bl-button-primary or .bl-button-secondary
    **/
  .bl-button {
-   @apply .uppercase .text-xs .font-medium .items-center .h-10 .w-32 .py-1 .rounded-sm .my-2 .border-2 .border-transparent;
+   @apply .uppercase .text-xs .font-medium .items-center .h-10 .min-w-24 .rounded-sm .my-2 .border-2 .border-transparent .py-1 px-2;
  }
  .bl-button:disabled {
    @apply .opacity-50 .cursor-not-allowed;
  }
  .bl-button-primary {
-   @apply .bg-bl-orange .text-white;
+   @apply .bg-bl-blue-light-500 .text-white;
  }
  .bl-button-primary:hover {
    @apply .opacity-75;
  }
  .bl-button-secondary {
-   @apply .bg-bl-blue-light .text-white;
+   @apply .bg-bl-blue-100 .text-bl-blue-500;
  }
- 
  .bl-button-secondary:hover {
    @apply .opacity-75
+ }
+ .bl-button-tertiary {
+   @apply .bg-transparent .text-bl-blue-500
+ }
+ .bl-button-tertiary:hover {
+   @apply .bg-bl-blue-100
  }
  .bl-button-checkbox {
    @apply .rounded-full .border .flex .items-center .justify-center;
@@ -145,82 +140,87 @@
  .bl-body-text {
    @apply .text-sm .font-body-text .leading-semi-tight;
  }
- 
+
  .bl-blue-gradient {
    background: linear-gradient(
        193.04deg,
        rgba(255, 255, 255, 0.2) 0%,
        rgba(255, 255, 255, 0) 55.87%
      ),
-     var(--bl-blue);
+     var(--bl-blue-500);
  }
- 
+
  .beta-text {
    align-self: baseline;
  }
- 
+
  .full-bleed-dialog .mat-dialog-container {
    padding: 0;
  }
- 
+
  @tailwind utilities;
- 
+
  :root {
-   --bl-blue: config("colors.bl-blue");
-   --bl-blue-light: config("colors.bl-blue-light");
-   --bl-blue-light-accent: config("colors.bl-blue-light-accent");
-   --bl-blue-accent: config("colors.bl-blue-accent");
-   --bl-blue-accent-light: config("colors.bl-blue-accent-light");
- 
+   --bl-background: config("colors.bl-background");
+
+   --bl-blue-500: config("colors.bl-blue-500");
+   --bl-blue-light-500: config("colors.bl-blue-light-500");
+   --bl-blue-light-100: config("colors.bl-blue-light-100");
+   --bl-blue-100: config("colors.bl-blue-100");
+   /* --bl-blue-accent-light: config("colors.bl-blue-accent-light"); */
+   /* --bl-blue-light-secondary-accent: config("colors.bl-blue-light-secondary-accent"); */
+
+   /* --bl-blue-dark-accent: config("colors.bl-blue-dark-accent");
+   --bl-blue-dark-accent-light: config("colors.bl-blue-dark-accent-light"); */
    --bl-black: config("colors.black");
- 
-   --bl-grey: config("colors.bl-grey");
-   --bl-grey-light: config("colors.bl-grey-light");
- 
-   --bl-orange: config("colors.bl-orange");
- 
-   --green: config("colors.green");
-   --green-light: config("colors.green-light");
- 
-   --red: config("colors.red");
-   --red-light: config("colors.red-light");
- 
+
+   --bl-grey-500: config("colors.bl-grey-500");
+   --bl-grey-300: config("colors.bl-grey-300");
+
+   --bl-orange-500: config("colors.bl-orange-500");
+
+   --bl-green-500: config("colors.bl-green-500");
+   --bl-green-100: config("colors.bl-green-100");
+
+   --bl-red-500: config("colors.bl-red-500");
+   --bl-red-100: config("colors.bl-red-100");
+   /* --bl-red-light-secondary: config("colors.red-light-secondary"); */
  }
- 
+
  * {
    margin: 0px;
    font-family: "Poppins", sans-serif;
  }
- 
+
  body {
    font-size: 62.5%;
  }
- 
+
  #mB {
    position: fixed;
    bottom: 0;
    z-index: 9;
  }
- 
+
  .mat-drawer-container {
-   background-color: unset;
+   background-color: var(--bl-blue-accent);
  }
- 
+
  .mat-drawer-content {
    overflow: unset;
  }
- 
+
  .form-component {
    width: 50%;
    font-size: 2em;
    margin-top: 0.8em;
    margin-left: 0.8em;
  }
- 
+
  /*.form-component:nth-child(2) .mat-form-field-underline {
    width: 100%;
  }*/
- 
+
  .wrapper-content {
    display: grid;
    grid-template-columns: 1fr repeat(10, 2fr) 1fr;
@@ -229,7 +229,7 @@
    height: 100vh;
    background-color: #ffffff;
  }
- 
+
  .wrapper-item {
    display: grid;
    grid-template-columns: 1fr repeat(10, 2fr) 1fr;
@@ -237,31 +237,31 @@
    grid-column: 2 / span 10;
    grid-row: 2 / span 4;
  }
- 
+
  .material-icons {
    align-items: center;
    justify-content: center;
    vertical-align: middle;
  }
- 
+
  /* .mat-row {
    padding: 0 8px !important;
  } */
- 
- 
- 
+
+
+
  .mat-header-cell:first-child {
    padding: 0 !important;
  }
- 
+
  .mat-cell:first-child {
    padding: 0 !important;
  }
- 
+
  /* .mat-row:hover {
    background-color: rgba(211, 211, 211, 0.603);
  } */
- 
+
  /* .mat-header-row {
    background-color: white;
    padding: 0 8px !important;
@@ -269,17 +269,20 @@
    top: 0;
    z-index: 1;
  } */
- 
+ .bg-bl-blue-gradient {
+   background: linear-gradient(rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 55.87%), var(--bl-blue-500);
+ }
+
  .item {
    justify-content: center;
    align-items: center;
  }
- 
+
  .component-header {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
  }
- 
+
  .form-component.search {
    grid-column: 1;
    font-size: 1.8em;
@@ -287,16 +290,16 @@
    margin-left: 0.8em;
    margin-bottom: 0.8em;
  }
- 
+
  .mat-option:hover {
    color: darkgrey;
  }
- 
+
  .employee-dialog .mat-dialog-container {
    padding-top: 0px;
  }
- 
- .cloudUser-dialog .mat-dialog-container {
+
+ .cloudUser-dialog .mat-dialog-container, .xs-dialog .mat-dialog-container  {
    padding: 0px;
    background-color: var(--bl-blue-accent);
    width: 100vh;
@@ -306,7 +309,7 @@
    position: relative;
    @apply rounded;
  }
- 
+
  @media (min-width: 769px) {
    .cloudUser-dialog .mat-dialog-container {
      background-color: var(--bl-blue-accent);
@@ -315,13 +318,40 @@
      max-width: 28rem;
      max-height: 894px;
    }
+   .xs-dialog .mat-dialog-container {
+     background-color: var(--bl-blue-accent);
+     width: 28rem;
+     height: 25vh;
+     max-width: 28rem;
+     max-height: 894px;
+   }
  }
- 
+
+ .inviteUser-dialog .mat-dialog-container {
+   padding: 0px;
+   background-color: var(--bl-blue-accent);
+   width: 100vh;
+   height: 100vh;
+   max-width: 100vh;
+   max-height: 100vh;
+   position: relative;
+   @apply rounded;
+ }
+
+ @media (min-width: 769px) {
+   .inviteUser-dialog .mat-dialog-container {
+     background-color: var(--white);
+     width: 80rem;
+     height: unset;
+     min-height: 15rem;
+   }
+ }
+
  .pkey-popup .mat-dialog-container {
    margin: 15px;
    width: unset;
  }
- 
+
  .errorSnackBar {
    background-color: #e3342f;
    color: white;
@@ -329,7 +359,7 @@
    text-align: center;
    font-weight: 400;
  }
- 
+
  .successSnackBar {
    background-color: #38c172;
    color: white;
@@ -337,38 +367,123 @@
    text-align: center;
    font-weight: 400;
  }
- 
+
  .mat-snack-bar-container {
    margin: 14px !important;
  }
- 
+
  .mat-content {
    margin-right: 10px;
    display: unset !important;
    flex: unset !important;
  }
- 
+ .bl-form-field.bl-form-field-w-auto.mat-form-field .mat-form-field-infix {
+  width: auto;
+ }
+ .bl-form-field.mat-form-field .mat-form-field-infix{
+   border: 0;
+   padding:0;
+   width: auto;
+ }
+ .bl-form-field.mat-form-field .mat-form-field-wrapper {
+   padding-bottom: 0;
+ }
+ .bl-form-field.mat-form-field .mat-select {
+   padding: 8px 0;
+ }
+ .dropdown-below {
+  top: 25px;
+  position: absolute;
+  right: -30px;
+ }
+ .dropdown-below-lg {
+   top: 35px;
+   position: absolute;
+   right: -30px;
+  }
+ .bl-form-field.mat-form-field .mat-select-value {
+   max-width: 100%;
+   color: var(--bl-blue);
+   font-size: 1rem;
+   font-weight: 500;
+   width:auto;
+ }
+ .bl-form-field.mat-form-field .mat-select-value-text {
+   margin-right: 0.5rem;
+   font-size: 1rem;
+ }
+ .bl-form-field.mat-form-field .mat-select-arrow {
+   border-left: 0;
+   border-top: 0;
+   margin: 0;
+   font-size: 0.7rem;
+ }
+ .bl-form-field.mat-form-field .mat-form-field-underline {
+   display: none;
+ }
+ .bl-form-field.mat-form-field .mat-form-field-underline {
+   height: 0;
+ }
+ .bl-form-field.mat-form-field .text-white .mat-select-value {
+   color: white;
+ }
+ .bl-form-field.mat-form-field .mat-select-arrow::before {
+   display: inline-block;
+   font-style: normal;
+   font-variant: normal;
+   text-rendering: auto;
+   -webkit-font-smoothing: antialiased;
+ }
+ .bl-form-field.mat-form-field .mat-select-arrow::before {
+   font-family: 'Font Awesome 5 Pro';
+   font-weight: 400;
+   content: '\f078';
+   color: var(--bl-blue);
+   top: -6px;
+   position: relative;
+ }
+ .bl-form-field.mat-form-field.bl-form-field-profile .mat-select-arrow::before {
+   top: -5px;
+  }
+ .bl-form-field.mat-form-field.mat-focused.mat-primary .text-white .mat-select-arrow::before, .bl-form-field.mat-form-field .text-white .mat-select-arrow::before  {
+
+   color: white;
+ }
+
+ .mat-primary .mat-option {
+   background-color: white;
+ }
+ mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+   background: var(--bl-blue-light-accent);
+   color: var(--bl-blue-light);
+ }
  /*Ugly fix for centering text in button on AGI*/
  .mat-button-wrapper {
    padding: 0 !important;
  }
- 
+
  .mat-column-code {
    flex: 0 0 80px;
  }
- 
+
  .mat-column-label {
    flex: 0 0 300px;
  }
- 
+
  /*Displaying different colors depending on the state of the form*/
- .ng-valid[required],
+ /* .ng-valid[required],
  .ng-valid.required,
  .ng-valid[pattern],
  .ng-valid.pattern {
    border-left: 0.25rem solid config("colors.green");
+ } */
+
+ input.ng-invalid {
+   border: 1px solid;
+   border-color: config("colors.bl-red-500");
+   background-color: config("colors.bl-red-100")
  }
- 
+
  /*Fix for hideous Material Table focus outline */
  mat-table.mat-table
    mat-header-cell.mat-header-cell
@@ -376,43 +491,43 @@
    > button.mat-sort-header-button:focus {
    outline: none;
  }
- 
+
  .mat-table {
    margin-right: config("margin.4");
    margin-left: config("margin.4");
  }
- 
+
  /* Fix for additional buttons showing up in date-pickers in webkit-browsers */
  input[type="date"]{
    -webkit-appearance: none;
  }
- 
+
  input[type="date"]::-webkit-inner-spin-button,
  input[type="date"]::-webkit-outer-spin-button {
    -webkit-appearance: none;
    display: none;
  }
- 
+
  input[type="date"]::-webkit-calendar-picker-indicator {
    -webkit-appearance: none;
    color: transparent;
  }
- 
+
  @media (max-width: 768px) {
    .wrapper-content {
      background-color: var(--bl-blue);
    }
- 
+
    .wrapper-item {
      grid-column: 1 / -1;
    }
- 
+
    /*reduce shadow on content*/
    .content-container {
      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
        0 3px 1px -2px rgba(0, 0, 0, 0.2);
    }
- 
+
    .mat-table {
      background-color: config("colors.bl-blue-accent");
      color: config("colors.black");
@@ -427,69 +542,69 @@
      z-index: 1;
      padding: 0px !important;
    } */
- 
+
    .mat-row {
      color: config("colors.black");
      background-color: #ffffff;
      padding: 0px !important;
    }
- 
+
    /* .mat-row:hover {
      background-color: inherit !important;
    } */
- 
+
    .mat-cell {
      color: config("colors.black");
      font-size: 1.2em;
    }
- 
+
    .mat-cell:first-child {
      padding: 0;
-     margin-left: 0.5rem;
-     margin-right: 0.5rem;
+     margin-left: config("margin.3");
+     margin-right: config("margin.3");
    }
    .mat-cell:last-child {
      padding: 0;
-     margin-right: 0.5rem;
+     margin-right: config("margin.3");
    }
- 
+
    .mat-header-cell {
      font-size: 1em;
      padding: 0;
    }
- 
+
    .mat-header-cell:first-child {
      margin-left: 0.5rem !important;
      margin-right: 0.5rem !important;
    }
- 
+
    .mat-header-cell:last-child {
      padding: 0 !important;
      margin-right: 0.5rem !important;
    }
- 
+
    .mat-column-dueDate {
      display: none;
    }
- 
+
    .mat-column-paid {
      flex: 0 0 auto;
    }
- 
+
    .mat-input-container label {
      color: red !important;
    }
- 
+
    /* .mat-column-invoiceNumber {
      max-width: fit-content;
      margin-right: 1rem;
    } */
- 
+
    .mat-form-field-label,
    .mat-select-value {
      color: var(--blgrey-color);
    }
- 
+
    .mat-option {
      /* background-color: var(--bl-blue); */
      color: var(--blgrey-color);
@@ -497,16 +612,15 @@
    .mat-option:hover {
      color: var(--bl-blue);
    }
- 
+
    .search {
      color: var(--blgrey-color);
    }
- 
+
    /*Ugly fix for AGI-dropdown on contact*/
    .mat-expansion-panel-body {
      position: relative;
    }
  }
- 
- 
- 
+
+
