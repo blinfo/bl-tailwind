@@ -310,6 +310,19 @@
    @apply rounded;
  }
 
+ .new-clouduser-dialog .mat-dialog-content  {
+  display: flex !important;
+  flex-direction: column !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  padding-bottom: 0 !important;
+  overflow-x: hidden !important;
+  margin: auto !important;
+  height: 100% !important;
+  width: 100% !important;
+  scrollbar-width: none !important;
+}
+
  @media (min-width: 769px) {
    .cloudUser-dialog .mat-dialog-container {
      background-color: var(--bl-blue-accent);
