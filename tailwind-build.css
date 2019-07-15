@@ -323,6 +323,14 @@
   scrollbar-width: none !important;
 }
 
+.new-clouduser-dialog .mat-dialog-content::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.new-clouduser-dialog .mat-dialog-content {
+  -ms-overflow-style: none;
+}
+
  @media (min-width: 769px) {
    .cloudUser-dialog .mat-dialog-container {
      background-color: var(--bl-blue-accent);
