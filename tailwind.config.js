@@ -50,30 +50,25 @@ let colors = {
   'bl-background': '#F1F6F8',
 
   'bl-red-800': '#661715',
+  'bl-red-600': '#cc2f2a',
   'bl-red-500': '#e3342f',
   'bl-red-200': '#f8cccb',
   'bl-red-100': '#fcebea',
 
-  // 'red': '#e3342f',
-  // 'red-light': '#ef5753',
-  // 'red-light-secondary': '#fcebea',
-
   'bl-green-800': '#195733',
+  'bl-green-600': '#32ae67',
   'bl-green-500': '#38c172',
   'bl-green-200': '#cdf0dc',
   'bl-green-100': '#ebf9f1',
 
-  // 'green': '#38c172',
-  // 'green-light': '#51d88a',
-
   'bl-orange-800': '#6D4714',
+  'bl-orange-600': '#DB8D29',
   'bl-orange-500': '#F39D2D',
   'bl-orange-200': '#FCE7CB',
   'bl-orange-100': '#FEF5EA',
 
-  // 'bl-orange': '#F39D2D',
-
   'bl-blue-800': '#061A25',
+  'bl-blue-600': '#0C334A',
   'bl-blue-500': '#0D3952',
   'bl-blue-400': '#567486',
   'bl-blue-300': '#9EB0BA',
@@ -81,31 +76,18 @@ let colors = {
   'bl-blue-100': '#E7EBEE',
 
   'bl-blue-light-800': '#284956',
+  'bl-blue-light-600': '#4F93AB',
   'bl-blue-light-500': '#58A3BE',
   'bl-blue-light-200': '#D5E8EF',
   'bl-blue-light-100': '#EEF6F9',
 
-  // 'bl-blue': '#0D3952',
-  // 'bl-blue-light': '#58A3BE',
-  // 'bl-blue-light-accent': '#EEF6F8',
-  // 'bl-blue-light-secondary-accent': '#abd2de',
-  // 'bl-blue-accent': '#E7EBEE',
-  // 'bl-blue-accent-light': '#f8f9fa',
-  // 'bl-blue-light-secondary-accent': '#abd2de',
-
-  // 'bl-blue-dark-accent': '#3D6175',
-  // 'bl-blue-dark-accent-light': '#CFD7DC',
-
   'bl-grey-800': '#3B3F43',
+  'bl-grey-600': '#777F86',
   'bl-grey-500': '#848d95',
   'bl-grey-400': '#A9AFB5',
   'bl-grey-300': '#CED1D5',
   'bl-grey-200': '#E0E3E5',
   'bl-grey-100': '#F3F4F4',
-
-  // 'bl-grey': '#848d95',
-  // 'bl-grey-light': '#CED1D5',
-
 }
 
 module.exports = {
