@@ -120,7 +120,7 @@
    @apply .bg-bl-blue-light-500 .text-white;
  }
  .bl-button-primary:hover {
-   @apply .opacity-75;
+   @apply .bg-bl-blue-light-200;
  }
  .bl-button-secondary {
    @apply .bg-bl-blue-100 .text-bl-blue-500;
