@@ -156,29 +156,49 @@
 
  :root {
    --bl-background: config("colors.bl-background");
-
-   --bl-blue-500: config("colors.bl-blue-500");
-   --bl-blue-light-500: config("colors.bl-blue-light-500");
-   --bl-blue-light-100: config("colors.bl-blue-light-100");
-   --bl-blue-100: config("colors.bl-blue-100");
-   /* --bl-blue-accent-light: config("colors.bl-blue-accent-light"); */
-   /* --bl-blue-light-secondary-accent: config("colors.bl-blue-light-secondary-accent"); */
-
-   /* --bl-blue-dark-accent: config("colors.bl-blue-dark-accent");
-   --bl-blue-dark-accent-light: config("colors.bl-blue-dark-accent-light"); */
    --bl-black: config("colors.black");
 
+   --bl-blue-800: config("colors.bl-blue-800");
+   --bl-blue-700: config("colors.bl-blue-700");
+   --bl-blue-600: config("colors.bl-blue-600");
+   --bl-blue-500: config("colors.bl-blue-500");
+   --bl-blue-400: config("colors.bl-blue-400");
+   --bl-blue-300: config("colors.bl-blue-300");
+   --bl-blue-200: config("colors.bl-blue-200");
+   --bl-blue-100: config("colors.bl-blue-100");
+
+   --bl-blue-light-800: config("colors.bl-blue-light-800");
+   --bl-blue-light-600: config("colors.bl-blue-light-600");
+   --bl-blue-light-500: config("colors.bl-blue-light-500");
+   --bl-blue-light-200: config("colors.bl-blue-light-200");
+   --bl-blue-light-100: config("colors.bl-blue-light-100");
+      
+   --bl-grey-800: config("colors.bl-grey-800");
+   --bl-grey-700: config("colors.bl-grey-700");
+   --bl-grey-600: config("colors.bl-grey-600");
    --bl-grey-500: config("colors.bl-grey-500");
+   --bl-grey-400: config("colors.bl-grey-400");
+   --bl-grey-300: config("colors.bl-grey-300");
+   --bl-grey-200: config("colors.bl-grey-200");
    --bl-grey-300: config("colors.bl-grey-300");
 
+   --bl-orange-800: config("colors.bl-orange-800");
+   --bl-orange-600: config("colors.bl-orange-600");
    --bl-orange-500: config("colors.bl-orange-500");
+   --bl-orange-200: config("colors.bl-orange-200");
+   --bl-orange-100: config("colors.bl-orange-100");
 
+   --bl-green-800: config("colors.bl-green-800");
+   --bl-green-600: config("colors.bl-green-600");
    --bl-green-500: config("colors.bl-green-500");
+   --bl-green-200: config("colors.bl-green-200");
    --bl-green-100: config("colors.bl-green-100");
 
+   --bl-red-800: config("colors.bl-red-800");
+   --bl-red-600: config("colors.bl-red-600");
    --bl-red-500: config("colors.bl-red-500");
+   --bl-red-200: config("colors.bl-red-200");
    --bl-red-100: config("colors.bl-red-100");
-   /* --bl-red-light-secondary: config("colors.red-light-secondary"); */
  }
 
  * {
