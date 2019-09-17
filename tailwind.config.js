@@ -68,9 +68,10 @@ let colors = {
   'bl-orange-100': '#FEF5EA',
 
   'bl-blue-800': '#061A25',
-  'bl-blue-600': '#0C334A',
-  'bl-blue-500': '#0D3952',
-  'bl-blue-400': '#567486',
+  'bl-blue-700': '#082331',
+  'bl-blue-600': '#0C344A',
+  'bl-blue-500': '#0D3A52',
+  'bl-blue-400': '#567586',
   'bl-blue-300': '#9EB0BA',
   'bl-blue-200': '#C3CED4',
   'bl-blue-100': '#E7EBEE',
@@ -81,13 +82,14 @@ let colors = {
   'bl-blue-light-200': '#D5E8EF',
   'bl-blue-light-100': '#EEF6F9',
 
-  'bl-grey-800': '#3B3F43',
-  'bl-grey-600': '#777F86',
-  'bl-grey-500': '#848d95',
-  'bl-grey-400': '#A9AFB5',
-  'bl-grey-300': '#CED1D5',
-  'bl-grey-200': '#E0E3E5',
-  'bl-grey-100': '#F3F4F4',
+  'bl-grey-800': '#2D3748',
+  'bl-grey-700': '#4A5568',
+  'bl-grey-600': '#718096',
+  'bl-grey-500': '#A0AEC0',
+  'bl-grey-400': '#CBD5E0',
+  'bl-grey-300': '#E2E8F0',
+  'bl-grey-200': '#EDF2F7',
+  'bl-grey-100': '#F7FAFC',
 }
 
 module.exports = {

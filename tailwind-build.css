@@ -61,36 +61,26 @@
  **/
 
  .bl-input {
-   @apply .block appearance-none w-full rounded text-bl-blue-500 text-sm leading-tight bg-bl-background border border-bl-background pl-2 pr-6 py-2;
+   @apply .block appearance-none w-full rounded text-bl-blue-500 text-base leading-semi-tight bg-bl-grey-200 border border-bl-grey-200 pl-3 pr-6 py-3;
  }
  .bl-input:focus {
-   @apply .outline-none bg-white border border-bl-blue-light-500;
- }
- .bl-input:hover {
-   @apply .opacity-75;
- }
- .bl-input::placeholder {
-   @apply .text-bl-blue-400
+   @apply .outline-none bg-white border border-bl-grey-300;
  }
 
  .bl-checkbox {
    @apply .block appearance-none rounded border border-bl-grey-500 p-3
  }
  .bl-checkbox:focus {
-   @apply .outline-none border-bl-blue-light-500;
+   @apply .outline-none border-bl-orange-500;
  }
  .bl-checkbox:checked {
-   @apply .bg-bl-blue-light-100
+   @apply .bg-bl-orange-100
  }
 
  .bl-label {
-   @apply .block tracking-wide truncate text-bl-grey-300 text-xs leading-normal;
+   @apply .block tracking-wide truncate text-bl-blue-500 text-xs leading-normal;
  }
- @screen md {
-   .bl-label {
-     @apply .text-base text-bl-grey-500 tracking-normal;
-   }
- }
+ 
  /** To use this the element needs to be wrapped around a div with position relative */
  .bl-label-arrow {
    @apply .pointer-events-none absolute pin-y pin-r flex items-center px-2 text-black;
@@ -101,38 +91,42 @@
  }
 
  .bl-select {
-   @apply .block h-10 appearance-none w-full rounded text-black text-sm bg-bl-background border border-bl-background pl-2 pr-6 py-2;
+   @apply .block h-12 appearance-none w-full rounded text-black text-base bg-bl-grey-200 border border-bl-grey-200 pl-3 pr-6 py-3;
  }
- .bl-select::placeholder {
-   @apply text-bl-grey-500;
+ .bl-select:focus {
+  @apply .outline-none bg-white border border-bl-grey-300;
  }
+
  /**
    BUTTONS
    .bl-button is the "shell" of the button. Then you apply the styling you perfer, eg. .bl-button-primary or .bl-button-secondary
    **/
  .bl-button {
-   @apply .text-sm .font-medium .items-center .h-10 .min-w-24 .rounded-full .my-2 .border-2 .border-transparent px-3;
+   @apply .text-base .font-medium .items-center .h-12 .min-w-24 .rounded-full .my-2 .border-2 .border-transparent px-4;
  }
  .bl-button:disabled {
-   @apply .opacity-50 .cursor-not-allowed;
+   @apply .opacity-75 .cursor-not-allowed;
+ }
+ .bl-button:focus {
+   @apply .outline-none .shadow-outline
  }
  .bl-button-primary {
-   @apply .bg-bl-blue-light-500 .text-white;
+   @apply .bg-bl-orange-500 .text-white;
  }
  .bl-button-primary:hover {
-   @apply .bg-bl-blue-light-600;
+   @apply .bg-bl-orange-600;
  }
  .bl-button-secondary {
-   @apply .bg-white .text-bl-blue-light-500 .border-bl-blue-light-500;
+   @apply .bg-white .text-bl-orange-600 .border-bl-orange-500;
  }
  .bl-button-secondary:hover {
-   @apply .bg-bl-blue-light-100 .text-bl-blue-light-600;
+   @apply .bg-bl-orange-100;
  }
  .bl-button-tertiary {
-   @apply .bg-transparent .text-bl-blue-light-500
+   @apply .bg-transparent .text-bl-orange-500
  }
  .bl-button-tertiary:hover {
-   @apply .text-bl-blue-light-600
+   @apply .text-bl-orange-600
  }
  .bl-button-checkbox {
    @apply .rounded-full .border .flex .items-center .justify-center;
@@ -516,6 +510,10 @@
  .mat-table {
    margin-right: config("margin.4");
    margin-left: config("margin.4");
+ }
+
+ input:disabled {
+   background-color: config("colors.bl-grey-100");
  }
 
  /* Fix for additional buttons showing up in date-pickers in webkit-browsers */
