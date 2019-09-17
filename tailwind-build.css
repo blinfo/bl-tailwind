@@ -71,10 +71,10 @@
    @apply .block appearance-none rounded border border-bl-grey-500 p-3
  }
  .bl-checkbox:focus {
-   @apply .outline-none border-bl-orange-500;
+   @apply .outline-none border-bl-blue-light-500;
  }
  .bl-checkbox:checked {
-   @apply .bg-bl-orange-100
+   @apply .bg-bl-blue-light-100
  }
 
  .bl-label {
@@ -111,22 +111,22 @@
    @apply .outline-none .shadow-outline
  }
  .bl-button-primary {
-   @apply .bg-bl-orange-500 .text-white;
+   @apply .bg-bl-blue-light-500 .text-white;
  }
  .bl-button-primary:hover {
-   @apply .bg-bl-orange-600;
+   @apply .bg-bl-blue-light-600;
  }
  .bl-button-secondary {
-   @apply .bg-white .text-bl-orange-600 .border-bl-orange-500;
+   @apply .bg-white .text-bl-blue-light-500 .border-bl-blue-light-500;
  }
  .bl-button-secondary:hover {
-   @apply .bg-bl-orange-100;
+   @apply .bg-bl-blue-light-100;
  }
  .bl-button-tertiary {
-   @apply .bg-transparent .text-bl-orange-500
+   @apply .bg-transparent .text-bl-blue-light-500
  }
  .bl-button-tertiary:hover {
-   @apply .text-bl-orange-600
+   @apply .text-bl-blue-light-600
  }
  .bl-button-checkbox {
    @apply .rounded-full .border .flex .items-center .justify-center;
