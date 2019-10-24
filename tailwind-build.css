@@ -522,7 +522,14 @@ input.ng-invalid {
   border-color: config("colors.bl-red-500");
   background-color: config("colors.bl-red-100");
 }
-
+input.ng-invalid.ng-pristine {
+  border-color: var(--bl-grey-200);
+  background-color: var(--bl-grey-200);
+}
+input.ng-invalid.ng-pristine:focus {
+  border-color: var(--bl-grey-200);
+  background-color: #ffffff;
+}
 /*Fix for hideous Material Table focus outline */
 mat-table.mat-table
   mat-header-cell.mat-header-cell
