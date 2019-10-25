@@ -68,11 +68,11 @@
 .bl-input-primary,
 input.bl-input-primary.ng-invalid.ng-pristine {
   border-color: #ffffff;
-  @apply .bg-white text-bl-blue-300 shadow;
+  @apply .bg-white text-bl-blue-500 shadow;
 }
 .bl-input-primary::placeholder,
 input.bl-input-primary.ng-invalid.ng-pristine {
-  @apply text-bl-blue-500;
+  @apply .text-bl-blue-300;
 }
 .bl-checkbox {
   @apply .block appearance-none rounded border border-bl-grey-500 p-3;
