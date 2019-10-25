@@ -66,12 +66,12 @@
   @apply .outline-none bg-white border border-bl-grey-300;
 }
 .bl-input-primary,
-.bl-input-primary.ng-pristine {
+input.bl-input-primary.ng-invalid.ng-pristine {
   border-color: #ffffff;
   @apply .bg-white text-bl-blue-300 shadow;
 }
 .bl-input-primary::placeholder,
-.bl-input-primary.ng-pristine {
+input.bl-input-primary.ng-invalid.ng-pristine {
   @apply text-bl-blue-500;
 }
 .bl-checkbox {
