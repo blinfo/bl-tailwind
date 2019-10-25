@@ -65,7 +65,13 @@
 .bl-input:focus {
   @apply .outline-none bg-white border border-bl-grey-300;
 }
-
+.bl-input-primary {
+  border-color: #ffffff;
+  @apply .bg-white text-bl-blue-300 shadow;
+}
+.bl-input-primary::placeholder {
+  @apply text-bl-blue-500;
+}
 .bl-checkbox {
   @apply .block appearance-none rounded border border-bl-grey-500 p-3;
 }
