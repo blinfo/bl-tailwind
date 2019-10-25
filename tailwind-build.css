@@ -65,11 +65,13 @@
 .bl-input:focus {
   @apply .outline-none bg-white border border-bl-grey-300;
 }
-.bl-input-primary {
+.bl-input-primary,
+.bl-input-primary.ng-pristine {
   border-color: #ffffff;
   @apply .bg-white text-bl-blue-300 shadow;
 }
-.bl-input-primary::placeholder {
+.bl-input-primary::placeholder,
+.bl-input-primary.ng-pristine {
   @apply text-bl-blue-500;
 }
 .bl-checkbox {
@@ -536,6 +538,7 @@ input.ng-invalid.ng-pristine:focus {
   border-color: var(--bl-grey-200);
   background-color: #ffffff;
 }
+
 /*Fix for hideous Material Table focus outline */
 mat-table.mat-table
   mat-header-cell.mat-header-cell
