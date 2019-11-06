@@ -74,6 +74,13 @@ input.bl-input-primary.ng-invalid.ng-pristine {
 input.bl-input-primary.ng-invalid.ng-pristine {
   @apply .text-bl-blue-300;
 }
+
+.bl-input-primary:focus,
+input.bl-input-primary.ng-invalid.ng-pristine {
+  position: static;
+  border-color: #ffffff;
+  @apply .shadow-md;
+}
 .bl-checkbox {
   @apply .block appearance-none rounded border border-bl-grey-500 p-3;
 }
