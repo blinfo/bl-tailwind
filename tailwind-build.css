@@ -76,7 +76,7 @@ input.bl-input-primary.ng-invalid.ng-pristine {
 }
 
 .bl-input-primary:focus,
-input.bl-input-primary.ng-invalid.ng-pristine {
+input.bl-input-primary.ng-invalid.ng-pristine:focus {
   position: static;
   border-color: #ffffff;
   @apply .shadow-md;
