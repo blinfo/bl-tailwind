@@ -362,6 +362,13 @@ body {
   -ms-overflow-style: none;
 }
 
+.chat-dialog .mat-dialog-container {
+  background-color: var(--bl-background);
+  width: 100vh;
+  height: 100vh;
+  overflow: hidden;
+}
+
 @media (min-width: 769px) {
   .cloudUser-dialog .mat-dialog-container {
     background-color: var(--bl-blue-accent);
@@ -376,6 +383,16 @@ body {
     height: 25vh;
     max-width: 28rem;
     max-height: 894px;
+  }
+
+  .chat-dialog .mat-dialog-container {
+    background-color: var(--bl-background);
+    width: 50rem;
+    height: auto;
+    min-height: 22rem;
+    max-height: 40rem;
+    overflow: hidden;
+    border-radius: .5rem;
   }
 }
 
