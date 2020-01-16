@@ -401,8 +401,7 @@ body {
     width: 50rem;
     height: auto;
     min-height: 22rem;
-    max-height: 40rem;
-    overflow: hidden;
+    max-height: 80rem;
     border-radius: .5rem;
   }
 
