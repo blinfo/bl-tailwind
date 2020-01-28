@@ -362,7 +362,8 @@ body {
   -ms-overflow-style: none;
 }
 
-.chat-dialog .mat-dialog-container {
+.chat-dialog .mat-dialog-container,
+.confirm-dialog .mat-dialog-container {
   background-color: var(--bl-background);
   width: 100vh;
   height: 100vh;
@@ -392,20 +393,28 @@ body {
     min-height: 22rem;
     max-height: 40rem;
     overflow: hidden;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
+  }
+  .confirm-dialog .mat-dialog-container {
+    width: 35rem;
+    height: auto;
+    min-height: 18rem;
+    max-height: 40rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
   }
 }
 
 .billing-dialog .mat-dialog-container {
-    background-color: var(--bl-background);
-    width: 50rem;
-    height: auto;
-    min-height: 22rem;
-    max-height: 80rem;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: .5rem;
-  }
+  background-color: var(--bl-background);
+  width: 50rem;
+  height: auto;
+  min-height: 22rem;
+  max-height: 80rem;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
 
 .inviteUser-dialog .mat-dialog-container {
   padding: 0px;
