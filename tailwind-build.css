@@ -74,6 +74,13 @@ input.bl-input-primary.ng-invalid.ng-pristine {
 input.bl-input-primary.ng-invalid.ng-pristine {
   @apply .text-bl-blue-300;
 }
+
+.bl-input-primary:focus,
+input.bl-input-primary.ng-invalid.ng-pristine:focus {
+  position: static;
+  border-color: #ffffff;
+  @apply .shadow-md;
+}
 .bl-checkbox {
   @apply .block appearance-none rounded border border-bl-grey-500 p-3;
 }
@@ -355,6 +362,13 @@ body {
   -ms-overflow-style: none;
 }
 
+.chat-dialog .mat-dialog-container {
+  background-color: var(--bl-background);
+  width: 100vh;
+  height: 100vh;
+  overflow: hidden;
+}
+
 @media (min-width: 769px) {
   .cloudUser-dialog .mat-dialog-container {
     background-color: var(--bl-blue-accent);
@@ -370,7 +384,28 @@ body {
     max-width: 28rem;
     max-height: 894px;
   }
+
+  .chat-dialog .mat-dialog-container {
+    background-color: var(--bl-background);
+    width: 50rem;
+    height: auto;
+    min-height: 22rem;
+    max-height: 40rem;
+    overflow: hidden;
+    border-radius: .5rem;
+  }
 }
+
+.billing-dialog .mat-dialog-container {
+    background-color: var(--bl-background);
+    width: 50rem;
+    height: auto;
+    min-height: 22rem;
+    max-height: 80rem;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: .5rem;
+  }
 
 .inviteUser-dialog .mat-dialog-container {
   padding: 0px;
