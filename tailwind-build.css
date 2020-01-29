@@ -412,6 +412,7 @@ body {
   min-height: 22rem;
   max-height: 80rem;
   margin: 0 auto;
+  padding-right: 0.1rem;
   overflow: hidden;
   border-radius: 0.5rem;
 }
