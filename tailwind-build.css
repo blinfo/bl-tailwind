@@ -146,7 +146,7 @@ input.bl-input-primary.ng-invalid.ng-pristine:focus {
   @apply .rounded-full .border .flex .items-center .justify-center;
 }
 .bl-body-text {
-  @apply .text-sm .font-body-text .leading-snug;
+  @apply .text-sm .leading-snug;
 }
 
 .bl-blue-gradient {
