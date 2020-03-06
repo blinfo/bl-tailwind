@@ -60,7 +60,7 @@
  **/
 
 .bl-input {
-  @apply .block appearance-none w-full rounded text-bl-blue-500 text-base leading-semi-tight bg-bl-grey-200 border border-bl-grey-200 pl-3 pr-6 py-3;
+  @apply .block appearance-none w-full rounded text-bl-blue-500 text-base leading-snug bg-bl-grey-200 border border-bl-grey-200 pl-3 pr-6 py-3;
 }
 .bl-input:focus {
   @apply .outline-none bg-white border border-bl-grey-300;
@@ -146,7 +146,7 @@ input.bl-input-primary.ng-invalid.ng-pristine:focus {
   @apply .rounded-full .border .flex .items-center .justify-center;
 }
 .bl-body-text {
-  @apply .text-sm .font-body-text .leading-semi-tight;
+  @apply .text-sm .font-body-text .leading-snug;
 }
 
 .bl-blue-gradient {
