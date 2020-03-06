@@ -9,7 +9,7 @@
  *
  * @import "tailwindcss/preflight";
  */
-@tailwind preflight;
+@tailwind base;
 
 /**
    * This injects any component classes registered by plugins.
@@ -43,7 +43,7 @@
 }
 
 .sub-menu-mobile {
-  @apply .flex justify-center w-full fixed pin-b h-16 bg-white border-t;
+  @apply .flex justify-center w-full fixed bottom-0 h-16 bg-white border-t;
 }
 @screen md {
   .sub-menu-mobile {
@@ -97,11 +97,11 @@ input.bl-input-primary.ng-invalid.ng-pristine:focus {
 
 /** To use this the element needs to be wrapped around a div with position relative */
 .bl-label-arrow {
-  @apply .pointer-events-none absolute pin-y pin-r flex items-center px-2 text-black;
+  @apply .pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-black;
 }
 
 .bl-search-icon {
-  @apply .pointer-events-none absolute pin-y pin-l flex items-center px-2 text-bl-grey-500;
+  @apply .pointer-events-none absolute inset-y-0 left-0 flex items-center px-2 text-bl-grey-500;
 }
 
 .bl-select {
@@ -169,50 +169,50 @@ input.bl-input-primary.ng-invalid.ng-pristine:focus {
 @tailwind utilities;
 
 :root {
-  --bl-background: config("colors.bl-background");
-  --bl-black: config("colors.black");
+  --bl-background: theme("colors.bl-background");
+  --bl-black: theme("colors.black");
 
-  --bl-blue-800: config("colors.bl-blue-800");
-  --bl-blue-700: config("colors.bl-blue-700");
-  --bl-blue-600: config("colors.bl-blue-600");
-  --bl-blue-500: config("colors.bl-blue-500");
-  --bl-blue-400: config("colors.bl-blue-400");
-  --bl-blue-300: config("colors.bl-blue-300");
-  --bl-blue-200: config("colors.bl-blue-200");
-  --bl-blue-100: config("colors.bl-blue-100");
+  --bl-blue-800: theme("colors.bl-blue-800");
+  --bl-blue-700: theme("colors.bl-blue-700");
+  --bl-blue-600: theme("colors.bl-blue-600");
+  --bl-blue-500: theme("colors.bl-blue-500");
+  --bl-blue-400: theme("colors.bl-blue-400");
+  --bl-blue-300: theme("colors.bl-blue-300");
+  --bl-blue-200: theme("colors.bl-blue-200");
+  --bl-blue-100: theme("colors.bl-blue-100");
 
-  --bl-blue-light-800: config("colors.bl-blue-light-800");
-  --bl-blue-light-600: config("colors.bl-blue-light-600");
-  --bl-blue-light-500: config("colors.bl-blue-light-500");
-  --bl-blue-light-200: config("colors.bl-blue-light-200");
-  --bl-blue-light-100: config("colors.bl-blue-light-100");
+  --bl-blue-light-800: theme("colors.bl-blue-light-800");
+  --bl-blue-light-600: theme("colors.bl-blue-light-600");
+  --bl-blue-light-500: theme("colors.bl-blue-light-500");
+  --bl-blue-light-200: theme("colors.bl-blue-light-200");
+  --bl-blue-light-100: theme("colors.bl-blue-light-100");
 
-  --bl-grey-800: config("colors.bl-grey-800");
-  --bl-grey-700: config("colors.bl-grey-700");
-  --bl-grey-600: config("colors.bl-grey-600");
-  --bl-grey-500: config("colors.bl-grey-500");
-  --bl-grey-400: config("colors.bl-grey-400");
-  --bl-grey-300: config("colors.bl-grey-300");
-  --bl-grey-200: config("colors.bl-grey-200");
-  --bl-grey-300: config("colors.bl-grey-300");
+  --bl-grey-800: theme("colors.bl-grey-800");
+  --bl-grey-700: theme("colors.bl-grey-700");
+  --bl-grey-600: theme("colors.bl-grey-600");
+  --bl-grey-500: theme("colors.bl-grey-500");
+  --bl-grey-400: theme("colors.bl-grey-400");
+  --bl-grey-300: theme("colors.bl-grey-300");
+  --bl-grey-200: theme("colors.bl-grey-200");
+  --bl-grey-300: theme("colors.bl-grey-300");
 
-  --bl-orange-800: config("colors.bl-orange-800");
-  --bl-orange-600: config("colors.bl-orange-600");
-  --bl-orange-500: config("colors.bl-orange-500");
-  --bl-orange-200: config("colors.bl-orange-200");
-  --bl-orange-100: config("colors.bl-orange-100");
+  --bl-orange-800: theme("colors.bl-orange-800");
+  --bl-orange-600: theme("colors.bl-orange-600");
+  --bl-orange-500: theme("colors.bl-orange-500");
+  --bl-orange-200: theme("colors.bl-orange-200");
+  --bl-orange-100: theme("colors.bl-orange-100");
 
-  --bl-green-800: config("colors.bl-green-800");
-  --bl-green-600: config("colors.bl-green-600");
-  --bl-green-500: config("colors.bl-green-500");
-  --bl-green-200: config("colors.bl-green-200");
-  --bl-green-100: config("colors.bl-green-100");
+  --bl-green-800: theme("colors.bl-green-800");
+  --bl-green-600: theme("colors.bl-green-600");
+  --bl-green-500: theme("colors.bl-green-500");
+  --bl-green-200: theme("colors.bl-green-200");
+  --bl-green-100: theme("colors.bl-green-100");
 
-  --bl-red-800: config("colors.bl-red-800");
-  --bl-red-600: config("colors.bl-red-600");
-  --bl-red-500: config("colors.bl-red-500");
-  --bl-red-200: config("colors.bl-red-200");
-  --bl-red-100: config("colors.bl-red-100");
+  --bl-red-800: theme("colors.bl-red-800");
+  --bl-red-600: theme("colors.bl-red-600");
+  --bl-red-500: theme("colors.bl-red-500");
+  --bl-red-200: theme("colors.bl-red-200");
+  --bl-red-100: theme("colors.bl-red-100");
 }
 
 * {
@@ -249,14 +249,6 @@ body {
    width: 100%;
  }*/
 
-.wrapper-content {
-  display: grid;
-  grid-template-columns: 1fr repeat(10, 2fr) 1fr;
-  grid-template-rows: 1fr repeat(4, 2fr) 1fr;
-  grid-auto-flow: dense;
-  height: 100vh;
-  background-color: #ffffff;
-}
 
 .wrapper-item {
   display: grid;
