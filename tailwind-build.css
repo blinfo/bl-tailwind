@@ -31,7 +31,7 @@
   max-width: 242px;
 }
 .nav-menu-items {
-  @apply .flex flex-row min-h-6 items-center text-lg antialiased font-medium cursor-pointer text-bl-grey-500 no-underline;
+  @apply .flex flex-row min-h-6 items-center text-lg antialiased font-medium cursor-pointer text-bl-grey-400 no-underline;
 }
 
 .sub-menu-desktop {
@@ -61,12 +61,12 @@
 
 .bl-input,
 input.bl-input.ng-invalid.ng-pristine {
-  @apply .block appearance-none w-full rounded-md .text-bl-grey-900 bg-white border border-bl-grey-200 px-3 py-2 shadow-sm;
+  @apply .block appearance-none w-full rounded-md text-base text-bl-grey-900 leading-6 bg-white border border-bl-grey-200 px-3 py-2 shadow-sm;
 }
 @screen sm {
   .bl-input,
   input.bl-input.ng-invalid.ng-pristine {
-    @apply text-sm leading-5;
+    @apply text-sm;
   }
 }
 
@@ -78,7 +78,7 @@ input.bl-input.ng-invalid.ng-pristine {
 .bl-input:focus,
 input.bl-input.ng-invalid.ng-pristine:focus {
   position: static;
-  @apply .outline-none border border-bl-grey-900;
+  @apply .outline-none shadow;
 }
 
 .bl-checkbox {
@@ -118,11 +118,11 @@ input.bl-input.ng-invalid.ng-pristine:focus {
    .bl-button is the "shell" of the button. Then you apply the styling you perfer, eg. .bl-button-primary or .bl-button-secondary
    **/
 .bl-button {
-  @apply .text-base .font-medium .items-center .min-w-24 .rounded-full .border .border-transparent px-3 py-2;
+  @apply .text-base .font-medium .items-center .min-w-24 .rounded-full .border .border-transparent px-3 py-2 leading-6
 }
 @screen sm {
   .bl-button {
-    @apply text-sm leading-5;
+    @apply text-sm;
   }
 }
 .bl-button:disabled {
@@ -132,10 +132,10 @@ input.bl-input.ng-invalid.ng-pristine:focus {
   @apply .outline-none .shadow-outline;
 }
 .bl-button-primary {
-  @apply .bg-bl-blue-light-500 .text-white;
+  @apply .bg-bl-orange-500 .text-white;
 }
 .bl-button-primary:hover {
-  @apply .bg-bl-blue-light-600;
+  @apply .bg-bl-orange-600;
 }
 .bl-button-secondary {
   @apply .bg-white .text-bl-grey-700 .border-bl-grey-200;
