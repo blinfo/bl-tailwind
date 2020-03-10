@@ -59,25 +59,20 @@
    The .bl-input and .bl-select is automatically set to width full. You need to wrap a div around it to set the width of the actual input.
  **/
 
-.bl-input,
-input.bl-input.ng-invalid.ng-pristine {
+.bl-input {
   @apply .block appearance-none w-full rounded-md text-base text-bl-grey-900 leading-6 bg-white border border-bl-grey-200 px-3 py-2 shadow-sm;
 }
 @screen sm {
-  .bl-input,
-  input.bl-input.ng-invalid.ng-pristine {
+  .bl-input {
     @apply text-sm;
   }
 }
 
-.bl-input::placeholder,
-input.bl-input.ng-invalid.ng-pristine {
+.bl-input::placeholder {
   @apply .text-bl-grey-500;
 }
 
-.bl-input:focus,
-input.bl-input.ng-invalid.ng-pristine:focus {
-  position: static;
+.bl-input:focus {
   @apply .outline-none shadow;
 }
 
@@ -558,22 +553,20 @@ mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
  .ng-valid.required,
  .ng-valid[pattern],
  .ng-valid.pattern {
-   border-left: 0.25rem solid config("colors.green");
+   border-left: 0.25rem solid theme("colors.green");
  } */
 
 input.ng-invalid {
-  border: 1px solid;
-  border-color: config("colors.bl-red-500");
-  background-color: config("colors.bl-red-100");
+  border-color: theme("colors.bl-red-500");
 }
-input.ng-invalid.ng-pristine {
+/* input.ng-invalid.ng-pristine {
   border-color: var(--bl-grey-200);
   background-color: var(--bl-grey-200);
 }
 input.ng-invalid.ng-pristine:focus {
   border-color: var(--bl-grey-200);
   background-color: #ffffff;
-}
+} */
 
 /*Fix for hideous Material Table focus outline */
 mat-table.mat-table
@@ -584,12 +577,12 @@ mat-table.mat-table
 }
 
 .mat-table {
-  margin-right: config("margin.4");
-  margin-left: config("margin.4");
+  margin-right: theme("margin.4");
+  margin-left: theme("margin.4");
 }
 
 input:disabled {
-  background-color: config("colors.bl-grey-100");
+  background-color: theme("colors.bl-grey-100");
 }
 
 /* Fix for additional buttons showing up in date-pickers in webkit-browsers */
@@ -655,10 +648,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   .mat-table {
-    background-color: config("colors.bl-blue-accent");
-    color: config("colors.black");
-    margin-right: config("margin.2");
-    margin-left: config("margin.2");
+    background-color: theme("colors.bl-blue-accent");
+    color: theme("colors.black");
+    margin-right: theme("margin.2");
+    margin-left: theme("margin.2");
   }
   /*
    .mat-header-row {
@@ -670,7 +663,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
    } */
 
   .mat-row {
-    color: config("colors.black");
+    color: theme("colors.black");
     background-color: #ffffff;
     padding: 0px !important;
   }
@@ -680,18 +673,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
    } */
 
   .mat-cell {
-    color: config("colors.black");
+    color: theme("colors.black");
     font-size: 1.2em;
   }
 
   .mat-cell:first-child {
     padding: 0;
-    margin-left: config("margin.3");
-    margin-right: config("margin.3");
+    margin-left: theme("margin.3");
+    margin-right: theme("margin.3");
   }
   .mat-cell:last-child {
     padding: 0;
-    margin-right: config("margin.3");
+    margin-right: theme("margin.3");
   }
 
   .mat-header-cell {
