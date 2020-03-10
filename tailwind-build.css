@@ -617,7 +617,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-color: var(--bl-orange-500);
 }
 .mat-radio-label-content {
-  color: var(--bl-blue-500);
+  color: var(--bl-grey-900);
   font-size: 12px;
 }
 .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
