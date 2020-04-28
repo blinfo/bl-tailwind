@@ -356,6 +356,10 @@ body {
   overflow: hidden;
 }
 
+.user-invitation-dialog .mat-dialog-container {
+  background-color: var(--bl-grey-50);
+}
+
 @media (min-width: 769px) {
   .cloudUser-dialog .mat-dialog-container {
     background-color: var(--bl-grey-100);
