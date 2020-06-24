@@ -90,6 +90,7 @@ module.exports = {
   variants: {
     appearance: ['responsive'],
     zIndex: ['responsive'],
+    padding: ['first', 'last'],
   },
   plugins: [
     require('@tailwindcss/custom-forms')
