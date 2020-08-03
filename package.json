@@ -1,6 +1,6 @@
 {
   "name": "@blinfo/bl-tailwind",
-  "version": "1.0.49",
+  "version": "1.0.50",
   "description": "BL Info Styling",
   "main": "tailwind.config.js",
   "scripts": {
