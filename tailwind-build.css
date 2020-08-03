@@ -73,7 +73,7 @@
 }
 
 .bl-input:focus {
-  @apply .outline-none shadow;
+  box-shadow: 0px 0px 0px 3px rgba(243, 157, 45, 0.5);
 }
 
 .bl-input.ng-invalid.ng-dirty {
