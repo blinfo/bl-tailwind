@@ -77,7 +77,11 @@
 }
 
 .bl-input.ng-invalid.ng-dirty {
-  border-color: #e3342f !important;
+  @apply .border-bl-red-500;
+}
+
+.bl-input.ng-invalid.ng-dirty:focus {
+  box-shadow: 0px 0px 0px 3px rgba(227, 52, 47, 0.5);
 }
 
 .bl-checkbox {
