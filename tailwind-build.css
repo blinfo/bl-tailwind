@@ -72,18 +72,33 @@
   @apply .text-bl-grey-500;
 }
 
-.bl-input:focus {
+.bl-input.ng-invalid {
+  border-color: var(--bl-grey-200);
+}
+
+.bl-input:focus
+.bl-input.ng-invalid:focus {
   outline: 0;
+  border-color: var(--bl-orange-500);
   box-shadow: 0px 0px 0px 3px rgba(243, 157, 45, 0.5);
 }
 
 .bl-input.ng-invalid.ng-dirty {
-  border-color: #e3342f !important;
+  border-color: #e3342f;
 }
 
 .bl-input.ng-invalid.ng-dirty:focus {
   outline: 0;
   box-shadow: 0px 0px 0px 3px rgba(227, 52, 47, 0.5);
+}
+
+.bl-input-error-icon {
+  bottom: 0.5em;
+  right: 1em;
+  z-index: 100;
+}
+.bl-input-error-multi-icon {
+  right: 2em !important;
 }
 
 .bl-checkbox {
