@@ -20,8 +20,6 @@
    */
 @tailwind components;
 
-@tailwind utilities;
-
 :root {
   --black: theme("colors.black");
   --white: theme("colors.white");
@@ -241,7 +239,7 @@
   padding: 0;
 }
 
-
+@tailwind utilities;
 
 * {
   margin: 0px;
