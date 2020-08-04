@@ -124,7 +124,7 @@
   border-color: var(--bl-grey-200);
 }
 
-.bl-input:focus
+.bl-input:focus,
 .bl-input.ng-invalid:focus {
   outline: 0;
   border-color: var(--bl-orange-500);
