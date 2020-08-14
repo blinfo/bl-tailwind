@@ -38,12 +38,14 @@
   --bl-red-800: theme("colors.bl-red-800");
   --bl-red-600: theme("colors.bl-red-600");
   --bl-red-500: theme("colors.bl-red-500");
+  --bl-red-300: theme("colors.bl-red-300");
   --bl-red-200: theme("colors.bl-red-200");
   --bl-red-100: theme("colors.bl-red-100");
 
   --bl-green-800: theme("colors.bl-green-800");
   --bl-green-600: theme("colors.bl-green-600");
   --bl-green-500: theme("colors.bl-green-500");
+  --bl-green-300: theme("colors.bl-green-300");
   --bl-green-200: theme("colors.bl-green-200");
   --bl-green-100: theme("colors.bl-green-100");
 
@@ -274,6 +276,10 @@ body {
 /*.form-component:nth-child(2) .mat-form-field-underline {
    width: 100%;
  }*/
+
+ .max-w-9xl {
+   width: 1536px;
+ }
 
 
 .wrapper-item {

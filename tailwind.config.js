@@ -19,12 +19,14 @@ module.exports = {
       'bl-red-800': '#661715',
       'bl-red-600': '#cc2f2a',
       'bl-red-500': '#e3342f',
+      'bl-red-300': '#F4AEAC',
       'bl-red-200': '#f8cccb',
       'bl-red-100': '#fcebea',
         
       'bl-green-800': '#195733',
       'bl-green-600': '#32ae67',
       'bl-green-500': '#38c172',
+      'bl-green-300': '#AFE6C7',
       'bl-green-200': '#cdf0dc',
       'bl-green-100': '#ebf9f1',
         
