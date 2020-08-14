@@ -278,7 +278,7 @@ body {
  }*/
 
  .max-w-9xl {
-   width: 1536px;
+   max-width: 1536px;
  }
 
 
