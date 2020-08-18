@@ -286,6 +286,10 @@ body {
    width: 100%;
  }*/
 
+ .max-w-9xl {
+   max-width: 1536px;
+ }
+
 
 .wrapper-item {
   display: grid;
