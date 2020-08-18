@@ -38,12 +38,14 @@
   --bl-red-800: theme("colors.bl-red-800");
   --bl-red-600: theme("colors.bl-red-600");
   --bl-red-500: theme("colors.bl-red-500");
+  --bl-red-300: theme("colors.bl-red-300");
   --bl-red-200: theme("colors.bl-red-200");
   --bl-red-100: theme("colors.bl-red-100");
 
   --bl-green-800: theme("colors.bl-green-800");
   --bl-green-600: theme("colors.bl-green-600");
   --bl-green-500: theme("colors.bl-green-500");
+  --bl-green-300: theme("colors.bl-green-300");
   --bl-green-200: theme("colors.bl-green-200");
   --bl-green-100: theme("colors.bl-green-100");
 
@@ -184,7 +186,7 @@
    .bl-button is the "shell" of the button. Then you apply the styling you perfer, eg. .bl-button-primary or .bl-button-secondary
    **/
 .bl-button {
-  @apply .text-base .font-medium .items-center .min-w-24 .rounded-full .border .border-transparent px-3 py-2 leading-6 shadow-sm;
+  @apply .text-base .font-medium .items-center .min-w-24 .rounded-full .border .border-transparent px-3 py-2 leading-6 shadow-sm .whitespace-no-wrap;
 }
 @screen sm {
   .bl-button {
@@ -195,7 +197,7 @@
   @apply .opacity-75 .cursor-not-allowed;
 }
 .bl-button:focus {
-  @apply .outline-none .shadow-outline;
+  @apply .outline-none .shadow-orange;
 }
 .bl-button-primary {
   @apply .bg-bl-orange-500 .text-white;
@@ -214,6 +216,15 @@
 }
 .bl-button-tertiary:hover {
   @apply .text-bl-grey-900;
+}
+.bl-button-secondary-red {
+  @apply .bg-white .text-bl-red-500 .border-bl-red-500;
+}
+.bl-button-secondary-red:hover {
+  @apply .bg-bl-red-100 .border-bl-red-500;
+}
+.bl-button-secondary-red:focus {
+  @apply .shadow-red;
 }
 .bl-button-checkbox {
   @apply .rounded-full .border .flex .items-center .justify-center;
