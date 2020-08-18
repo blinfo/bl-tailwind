@@ -90,7 +90,7 @@ module.exports = {
       },
       boxShadow: {
         orange: '0 0 0 3px rgba(243, 157, 45, 0.5)',
-        red: '0 0 0 3px #e3342f',
+        red: '0 0 0 3px rgba(227, 52, 47, 0.5)',
       }
     }
   },
