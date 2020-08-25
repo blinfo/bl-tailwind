@@ -52,7 +52,8 @@ module.exports = {
       'sm': '576px',
       'md': '769px',
       'lg': '992px',
-      'xl': '1441px'
+      'xl': '1441px',
+      'xxl': '1790px',
     },
     fontFamily: {
       'sans': 'Poppins, Open Sans, system-ui',
