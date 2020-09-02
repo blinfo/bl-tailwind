@@ -226,6 +226,17 @@
 .bl-button-secondary-red:focus {
   @apply .shadow-red;
 }
+
+.bl-button-warning {
+  @apply .bg-bl-red-500 .text-white;
+}
+.bl-button-warning:hover {
+  @apply .bg-bl-red-600;
+}
+.bl-button-warning:focus {
+  @apply .shadow-red;
+}
+
 .bl-button-checkbox {
   @apply .rounded-full .border .flex .items-center .justify-center;
 }
