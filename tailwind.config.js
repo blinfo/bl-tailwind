@@ -13,7 +13,7 @@ module.exports = {
       'bl-grey-400': '#9fa6b2',
       'bl-grey-300': '#d2d6dc',
       'bl-grey-200': '#e5e7eb',
-      'bl-grey-100': '#f7fafc',
+      'bl-grey-100': '#f4f5f7',
       'bl-grey-50': '#f9fafb',
 
       'bl-red-800': '#661715',
