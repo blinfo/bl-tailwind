@@ -407,6 +407,13 @@ body {
   overflow: hidden;
 }
 
+.register-payment-dialog .mat-dialog-container {
+  background-color: var(--bl-grey-100);
+  width: 100vh;
+  height: 100vh;
+  overflow: visible;
+}
+
 .user-invitation-dialog .mat-dialog-container {
   background-color: var(--bl-grey-50);
 }
@@ -442,6 +449,15 @@ body {
     min-height: 18rem;
     max-height: 40rem;
     overflow: hidden;
+    border-radius: 0.5rem;
+  }
+
+  .register-payment-dialog .mat-dialog-container {
+    width: 35rem;
+    height: auto;
+    min-height: 18rem;
+    max-height: 40rem;
+    overflow: visible;
     border-radius: 0.5rem;
   }
 }
