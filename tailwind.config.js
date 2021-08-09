@@ -60,6 +60,19 @@ module.exports = {
       'sans': 'Poppins, Open Sans, system-ui',
     },
 
+    fontSize: {
+      xs: '0.75rem',
+      sm: '0.875rem',
+      base: '1rem',
+      lg: '1.125rem',
+      xl: '1.25rem',
+      '2xl': '1.5rem',
+      '3xl': '1.875rem',
+      '4xl': '2.25rem',
+      '5xl': '3rem',
+      '6xl': '4rem',
+    },
+
     extend: {
       spacing: {
         '96': '24rem',
@@ -93,6 +106,7 @@ module.exports = {
       boxShadow: {
         orange: '0 0 0 3px rgba(243, 157, 45, 0.5)',
         red: '0 0 0 3px rgba(227, 52, 47, 0.5)',
+        xs: '0 0 0 1px rgba(0, 0, 0, 0.05)',
       }
     }
   },
@@ -101,6 +115,6 @@ module.exports = {
     zIndex: ['responsive'],
   },
   plugins: [
-    require('@tailwindcss/custom-forms')
+    require('@tailwindcss/forms')
   ],
 }

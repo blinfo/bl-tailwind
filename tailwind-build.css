@@ -68,8 +68,10 @@
   --bl-blue-light-100: theme("colors.bl-blue-light-100");
 }
 
+@tailwind utilities;
+
 .border-thin {
-  @apply .w-full border-b border-bl-grey-200 py-2;
+  @apply w-full border-b border-bl-grey-200 py-2;
 }
 
 /** NAV & SUB-MENU
@@ -79,28 +81,28 @@
   max-width: 242px;
 }
 .nav-menu-items {
-  @apply .flex flex-row min-h-6 items-center text-lg antialiased font-medium cursor-pointer text-bl-grey-400 no-underline;
+  @apply flex flex-row min-h-6 items-center text-lg antialiased font-medium cursor-pointer text-bl-grey-400 no-underline;
 }
 
 .sub-menu-desktop {
-  @apply .flex flex-row w-full bg-transparent;
+  @apply flex flex-row w-full bg-transparent;
 }
 
 .sub-menu-items-desktop {
-  @apply .flex flex-col no-underline text-center items-center justify-center;
+  @apply flex flex-col no-underline text-center items-center justify-center;
 }
 
 .sub-menu-mobile {
-  @apply .flex justify-center w-full fixed bottom-0 h-16 bg-white border-t;
+  @apply flex justify-center w-full fixed bottom-0 h-16 bg-white border-t;
 }
 @screen md {
   .sub-menu-mobile {
-    @apply .hidden border-none;
+    @apply hidden border-none;
   }
 }
 
 .sub-menu-items-mobile {
-  @apply .flex flex-col font-normal antialiased text-sm text-black opacity-50 no-underline text-center items-center justify-center;
+  @apply flex flex-col font-normal antialiased text-sm text-black opacity-50 no-underline text-center items-center justify-center;
 }
 
 /** FORM-ELEMENTS
@@ -108,7 +110,7 @@
  **/
 
 .bl-input {
-  @apply .block appearance-none w-full rounded-md text-base text-bl-grey-900 leading-6 bg-white border border-bl-grey-200 px-3 py-2 shadow-sm;
+  @apply w-full rounded-md text-base text-bl-grey-900 leading-6 bg-white border border-bl-grey-200 px-3 py-2 shadow-sm;
 }
 @screen sm {
   .bl-input {
@@ -117,7 +119,7 @@
 }
 
 .bl-input::placeholder {
-  @apply .text-bl-grey-500;
+  @apply text-bl-grey-500;
 }
 
 .bl-input.ng-invalid {
@@ -149,36 +151,44 @@
   right: 2em !important;
 }
 
+.form-radio {
+  @apply border border-bl-grey-200;
+}
+
+.form-radio:focus {
+  @apply ring- shadow-orange border border-bl-orange-500;
+}
+
 .bl-checkbox {
-  @apply .block appearance-none rounded border border-bl-grey-500 p-3;
+  @apply block appearance-none rounded border border-bl-grey-500 p-3;
 }
 
 .bl-checkbox:focus {
-  @apply .outline-none border-bl-orange-500;
+  @apply outline-none shadow-orange border-bl-orange-500;
 }
 
 .bl-checkbox:checked {
-  @apply .bg-bl-orange-100;
+  @apply bg-bl-orange-100;
 }
 
 .bl-label {
-  @apply .block truncate text-sm font-medium leading-5 text-bl-grey-700;
+  @apply block truncate text-sm font-medium leading-5 text-bl-grey-700;
 }
 
 /** To use this the element needs to be wrapped around a div with position relative */
 .bl-label-arrow {
-  @apply .pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-black;
+  @apply pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-black;
 }
 
 .bl-search-icon {
-  @apply .pointer-events-none absolute inset-y-0 left-0 flex items-center px-2 text-bl-grey-500;
+  @apply pointer-events-none absolute inset-y-0 left-0 flex items-center px-2 text-bl-grey-500;
 }
 
 .bl-select {
-  @apply .block appearance-none w-full rounded-md text-base text-bl-grey-900 leading-6 bg-white border border-bl-grey-200 px-3 py-2 shadow-sm;
+  @apply block appearance-none w-full rounded-md text-base text-bl-grey-900 leading-6 bg-white border border-bl-grey-200 px-3 py-2 shadow-sm;
 }
 .bl-select:focus {
-  @apply .outline-none shadow;
+  @apply outline-none shadow;
 }
 
 /**
@@ -186,7 +196,7 @@
    .bl-button is the "shell" of the button. Then you apply the styling you perfer, eg. .bl-button-primary or .bl-button-secondary
    **/
 .bl-button {
-  @apply .text-base .font-medium .items-center .min-w-24 .rounded-full .border .border-transparent px-3 py-2 leading-6 shadow-sm .whitespace-no-wrap;
+  @apply text-base font-medium items-center min-w-24 rounded-full border border-transparent px-3 py-2 leading-6 shadow-sm whitespace-nowrap;
 }
 @screen sm {
   .bl-button {
@@ -194,54 +204,54 @@
   }
 }
 .bl-button:disabled {
-  @apply .opacity-75 .cursor-not-allowed;
+  @apply opacity-75 cursor-not-allowed;
 }
 .bl-button:focus {
-  @apply .outline-none .shadow-orange;
+  @apply outline-none shadow-orange;
 }
 .bl-button-primary {
-  @apply .bg-bl-orange-500 .text-white;
+  @apply bg-bl-orange-500 text-white;
 }
 .bl-button-primary:hover {
-  @apply .bg-bl-orange-600;
+  @apply bg-bl-orange-600;
 }
 .bl-button-secondary {
-  @apply .bg-white .text-bl-grey-700 .border-bl-grey-200;
+  @apply bg-white text-bl-grey-700 border-bl-grey-200;
 }
 .bl-button-secondary:hover {
-  @apply .border-bl-grey-400;
+  @apply border-bl-grey-400;
 }
 .bl-button-tertiary {
-  @apply .bg-transparent .text-bl-grey-700;
+  @apply bg-transparent text-bl-grey-700;
 }
 .bl-button-tertiary:hover {
-  @apply .text-bl-grey-900;
+  @apply text-bl-grey-900;
 }
 .bl-button-secondary-red {
-  @apply .bg-white .text-bl-red-500 .border-bl-red-500;
+  @apply bg-white text-bl-red-500 border-bl-red-500;
 }
 .bl-button-secondary-red:hover {
-  @apply .bg-bl-red-100 .border-bl-red-500;
+  @apply bg-bl-red-100 border-bl-red-500;
 }
 .bl-button-secondary-red:focus {
-  @apply .shadow-red;
+  @apply shadow-red;
 }
 
 .bl-button-warning {
-  @apply .bg-bl-red-500 .text-white;
+  @apply bg-bl-red-500 text-white;
 }
 .bl-button-warning:hover {
-  @apply .bg-bl-red-600;
+  @apply bg-bl-red-600;
 }
 .bl-button-warning:focus {
-  @apply .shadow-red;
+  @apply shadow-red;
 }
 
 .bl-button-checkbox {
-  @apply .rounded-full .border .flex .items-center .justify-center;
+  @apply rounded-full border flex items-center justify-center;
 }
 .bl-body-text {
-  @apply .text-sm .leading-snug;
+  @apply text-sm leading-snug;
 }
 
 .bl-blue-gradient {
@@ -260,8 +270,6 @@
 .full-bleed-dialog .mat-dialog-container {
   padding: 0;
 }
-
-@tailwind utilities;
 
 * {
   margin: 0px;
