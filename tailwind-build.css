@@ -156,7 +156,7 @@
 }
 
 .form-radio:focus {
-  @apply ring- shadow-orange border border-bl-orange-500;
+  @apply shadow-orange border border-bl-orange-500;
 }
 
 .bl-checkbox {
