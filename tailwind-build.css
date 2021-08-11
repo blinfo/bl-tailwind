@@ -156,7 +156,7 @@
 }
 
 .form-radio:focus {
-  @apply shadow-orange border border-bl-orange-500;
+  @apply ring-2 ring-bl-orange-500 ring-opacity-50 ring-offset-1 border border-bl-orange-500;
 }
 
 .bl-checkbox {
@@ -164,7 +164,7 @@
 }
 
 .bl-checkbox:focus {
-  @apply outline-none shadow-orange border-bl-orange-500;
+  @apply outline-none ring-2 ring-bl-orange-500 ring-opacity-50 ring-offset-1 border-bl-orange-500;
 }
 
 .bl-checkbox:checked {
@@ -207,7 +207,7 @@
   @apply opacity-75 cursor-not-allowed;
 }
 .bl-button:focus {
-  @apply outline-none shadow-orange;
+  @apply outline-none ring-4 ring-bl-orange-500 ring-opacity-50;
 }
 .bl-button-primary {
   @apply bg-bl-orange-500 text-white;
