@@ -5,15 +5,15 @@ module.exports = {
       'black': '#000000',
       'white': '#ffffff',
 
-      'bl-grey-900': '#161e2e',
-      'bl-grey-800': '#252f3f',
+      'bl-grey-900': '#111827',
+      'bl-grey-800': '#1f2937',
       'bl-grey-700': '#374151',
       'bl-grey-600': '#4b5563',
       'bl-grey-500': '#6b7280',
-      'bl-grey-400': '#9fa6b2',
-      'bl-grey-300': '#d2d6dc',
+      'bl-grey-400': '#9ca3af',
+      'bl-grey-300': '#d1d5db',
       'bl-grey-200': '#e5e7eb',
-      'bl-grey-100': '#f4f5f7',
+      'bl-grey-100': '#f3f4f6',
       'bl-grey-50': '#f9fafb',
 
       'bl-red-800': '#661715',
@@ -104,9 +104,12 @@ module.exports = {
         '32': '8rem',
       },
       boxShadow: {
+        xs: '0 1 2px rgba(0, 0, 0, 0.05)',
+        DEFAULT: '0 1 2px rgba(0, 0, 0, 0.06)',
+        lg: '0 4 6 -2px rgba(0, 0, 0, 0.05)',
         orange: '0 0 0 3px rgba(243, 157, 45, 0.5)',
         red: '0 0 0 3px rgba(227, 52, 47, 0.5)',
-        xs: '0 0 0 1px rgba(0, 0, 0, 0.05)',
+        
       }
     }
   },
