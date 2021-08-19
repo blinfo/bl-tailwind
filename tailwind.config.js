@@ -104,9 +104,9 @@ module.exports = {
         '32': '8rem',
       },
       boxShadow: {
-        xs: '0 1 2px rgba(0, 0, 0, 0.05)',
-        DEFAULT: '0 1 2px rgba(0, 0, 0, 0.06)',
-        lg: '0 4 6 -2px rgba(0, 0, 0, 0.05)',
+        xs: '0 1px 2px rgba(0, 0, 0, 0.05)',
+        DEFAULT: '0 1px 2px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.1)', 
+        lg: '0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.1)',
         orange: '0 0 0 3px rgba(243, 157, 45, 0.5)',
         red: '0 0 0 3px rgba(227, 52, 47, 0.5)',
         

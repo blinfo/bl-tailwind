@@ -152,11 +152,19 @@
 }
 
 .form-radio {
-  @apply border border-bl-grey-200;
+  @apply border border-bl-grey-300 mr-3;
 }
 
-.form-radio:focus {
-  @apply shadow-orange border border-bl-orange-500;
+.toggle {
+  @apply relative inline-flex flex-shrink-0 h-6 w-12 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200;
+}
+
+.form-checkbox {
+  @apply block appearance-none rounded border border-bl-grey-300 text-bl-orange-500 my-1 mr-3;
+}
+
+.form-checkbox:focus, .form-radio:focus, .toggle:focus {
+  @apply outline-none ring-2 ring-offset-2 ring-bl-orange-500;
 }
 
 .bl-checkbox {
@@ -206,20 +214,23 @@
 .bl-button:disabled {
   @apply opacity-75 cursor-not-allowed;
 }
-.bl-button:focus {
-  @apply outline-none shadow-orange;
+.bl-button:focus, .bl-button-primary-circular:focus {
+  @apply outline-none ring-2 ring-offset-2 ring-bl-orange-500;
 }
 .bl-button-primary {
   @apply bg-bl-orange-500 text-white;
 }
-.bl-button-primary:hover {
+.bl-button-primary-circular {
+  @apply bg-bl-orange-500 fixed rounded-full shadow-md right-0 mb-5 mr-5 p-6 z-10;
+}
+.bl-button-primary:hover, .bl-button-primary-circular:hover {
   @apply bg-bl-orange-600;
 }
 .bl-button-secondary {
   @apply bg-white text-bl-grey-700 border-bl-grey-200;
 }
 .bl-button-secondary:hover {
-  @apply border-bl-grey-400;
+  @apply border-bl-grey-50;
 }
 .bl-button-tertiary {
   @apply bg-transparent text-bl-grey-700;
@@ -244,7 +255,7 @@
   @apply bg-bl-red-600;
 }
 .bl-button-warning:focus {
-  @apply shadow-red;
+  @apply outline-none ring-2 ring-offset-2 ring-bl-red-500;
 }
 
 .bl-button-checkbox {
