@@ -114,6 +114,9 @@ module.exports = {
     }
   },
   variants: {
+    extend: {
+      margin: ['last'],
+    },
     appearance: ['responsive'],
     zIndex: ['responsive'],
   },

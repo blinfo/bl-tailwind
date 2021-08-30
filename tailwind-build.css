@@ -109,6 +109,10 @@
    The .bl-input and .bl-select is automatically set to width full. You need to wrap a div around it to set the width of the actual input.
  **/
 
+.form-section {
+  @apply shadow bg-white md:rounded-md md:p-6 p-4;
+}
+
 .bl-input {
   @apply w-full rounded-md text-base text-bl-grey-900 leading-6 bg-white border border-bl-grey-200 pr-3 py-2 shadow-sm;
 }
@@ -128,18 +132,15 @@
 
 .bl-input:focus,
 .bl-input.ng-invalid:focus {
-  outline: 0;
-  border-color: var(--bl-orange-500);
-  box-shadow: 0px 0px 0px 3px rgba(243, 157, 45, 0.5);
+  @apply outline-none border-bl-orange-500 ring-1 ring-bl-orange-500;
 }
 
 .bl-input.ng-invalid.ng-dirty {
-  border-color: #e3342f;
+  @apply outline-none border-bl-red-500;
 }
 
 .bl-input.ng-invalid.ng-dirty:focus {
-  outline: 0;
-  box-shadow: 0px 0px 0px 3px rgba(227, 52, 47, 0.5);
+  @apply outline-none border-bl-red-500 ring-1 ring-bl-red-500;
 }
 
 .bl-input-error-icon {
@@ -202,6 +203,7 @@
 /**
    BUTTONS
    .bl-button is the "shell" of the button. Then you apply the styling you perfer, eg. .bl-button-primary or .bl-button-secondary
+   circular buttons do not need this shell
    **/
 .bl-button {
   @apply text-base font-medium items-center min-w-24 rounded-full border border-transparent px-3 py-2 leading-6 shadow-sm whitespace-nowrap;
@@ -221,7 +223,10 @@
   @apply bg-bl-orange-500 text-white;
 }
 .bl-button-primary-circular {
-  @apply bg-bl-orange-500 fixed rounded-full shadow-md right-0 mb-5 mr-5 p-6 z-10;
+  @apply bg-bl-orange-500 fixed rounded-full shadow-md right-0 mb-5 mr-5 p-6 z-10 text-white;
+}
+.bl-button-secondary-circular {
+  @apply w-12 min-w-0 flex-initial mx-4 bg-white text-bl-grey-700 ring-1 ring-bl-grey-200 rounded-full;
 }
 .bl-button-primary:hover, .bl-button-primary-circular:hover {
   @apply bg-bl-orange-600;
