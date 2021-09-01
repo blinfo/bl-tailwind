@@ -114,12 +114,16 @@
 }
 
 .bl-input {
-  @apply w-full rounded-md text-base text-bl-grey-900 leading-6 bg-white border border-bl-grey-200 pr-3 py-2 shadow-sm;
+  @apply w-full rounded-md text-base text-bl-grey-900 leading-6 bg-white border border-bl-grey-200 px-3 py-2 shadow-sm;
 }
 @screen sm {
   .bl-input {
     @apply text-sm;
   }
+}
+
+.search-filter-bl-input {
+  @apply w-full text-base text-bl-grey-900 border border-bl-grey-200 shadow-sm;
 }
 
 .bl-input::placeholder {
@@ -131,7 +135,7 @@
 }
 
 .bl-input:focus,
-.bl-input.ng-invalid:focus {
+.bl-input.ng-invalid:focus, .search-filter-bl-input:focus {
   @apply outline-none border-bl-orange-500 ring-1 ring-bl-orange-500;
 }
 
@@ -250,7 +254,7 @@
   @apply bg-bl-red-100 border-bl-red-500;
 }
 .bl-button-secondary-red:focus {
-  @apply shadow-red;
+  @apply outline-none ring-2 ring-offset-2 ring-bl-red-500;
 }
 
 .bl-button-warning {
@@ -486,8 +490,7 @@ body {
   }
 }
 
-.billing-dialog .mat-dialog-container {
-  background-color: var(--bl-grey-100);
+/* .billing-dialog .mat-dialog-container {
   width: 50rem;
   height: auto;
   min-height: 22rem;
@@ -496,7 +499,7 @@ body {
   padding-right: 0.1rem;
   overflow: hidden;
   border-radius: 0.5rem;
-}
+} */
 
 /* .inviteUser-dialog .mat-dialog-container {
   padding: 0px;
