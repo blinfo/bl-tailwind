@@ -1,6 +1,6 @@
 {
   "name": "@blinfo/bl-tailwind",
-  "version": "1.0.74",
+  "version": "2.0.0",
   "description": "BL Info Styling",
   "main": "tailwind.config.js",
   "scripts": {
@@ -10,13 +10,15 @@
     "type": "git",
     "url": "git+https://github.com/blinfo/bl-tailwind.git"
   },
-  "author": "Björn Lundén Information AB",
+  "author": "Björn Lundén AB",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/blinfo/bl-tailwind/issues"
   },
   "homepage": "https://github.com/blinfo/bl-tailwind#readme",
-  "dependencies": {
-    "@tailwindcss/forms": "^0.3.3"
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.3.4",
+    "autoprefixer": "^10.4.4",
+    "tailwindcss": "^2.2.0"
   }
 }

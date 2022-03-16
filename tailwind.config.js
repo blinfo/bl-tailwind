@@ -1,3 +1,7 @@
+const plugin = require('tailwindcss/plugin')
+const baseStyle = require('./bl-base');
+const componentsStyle = require('./bl-components');
+
 module.exports = {
   theme: {
     colors: { 
@@ -123,7 +127,15 @@ module.exports = {
     appearance: ['responsive'],
     zIndex: ['responsive'],
   },
+  purge: {
+    enabled: true,
+    content: ['./src/**/*.{html,ts}']
+  },
   plugins: [
-    require('@tailwindcss/forms')
+    require('@tailwindcss/forms'),
+    plugin(function ({ addBase, addComponents, theme }) {
+      addBase(baseStyle(theme));
+      addComponents(componentsStyle(theme));
+    })
   ],
 }
