@@ -147,6 +147,15 @@ module.exports = (theme) => ({
     '.bl-button-secondary-red:focus': {
       '@apply outline-none ring-2 ring-offset-2 ring-bl-red-500': {}
     },
+    '.bl-button-secondary-blue': {
+      '@apply bg-bl-blue-500 text-white': {}
+    },
+    '.bl-button-secondary-blue:hover': {
+      '@apply bg-bl-blue-800': {}
+    },
+    '.bl-button-secondary-blue:focus': {
+      '@apply outline-none ring-2 ring-offset-2 ring-bl-blue-500': {}
+    },
     '.bl-button-warning': {
       '@apply bg-bl-red-500 text-white': {}
     },
