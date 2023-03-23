@@ -49,6 +49,7 @@ module.exports = {
       'bl-blue-light-800': '#284956',
       'bl-blue-light-600': '#4f93ab',
       'bl-blue-light-500': '#58a3be',
+      'bl-blue-light-300': '#bcdae5',
       'bl-blue-light-200': '#d5e8ef',
       'bl-blue-light-100': '#eef6f9',
      },
