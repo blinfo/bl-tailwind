@@ -3,6 +3,7 @@ const baseStyle = require('./bl-base');
 const componentsStyle = require('./bl-components');
 
 module.exports = {
+  darkMode: "class", 
   theme: {
     colors: { 
       'transparent': 'transparent',

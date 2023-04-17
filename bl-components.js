@@ -27,8 +27,12 @@ module.exports = (theme) => ({
     "@apply text-bl-grey-500 dark:text-bl-grey-200": {},
   },
 
+  // ".bl-input.ng-invalid": {
+  //   borderColor: theme("colors.bl-grey-200"),
+  // },
+
   ".bl-input.ng-invalid": {
-    borderColor: theme("colors.bl-grey-200"),
+    "@apply border-bl-grey-200 dark:border-bl-grey-600": {},
   },
 
   ".bl-input:focus": {

@@ -61,7 +61,8 @@ module.exports = (theme) => ({
   },
 
   "input:disabled": {
-    backgroundColor: theme("colors.bl-grey-100 dark:colors.bl-grey-700"),
+    "@apply bg-bl-grey-100 dark:bg-bl-grey-800 dark:text-bl-grey-300": {},
+    // backgroundColor: theme("colors.bl-grey-100")
   },
 
   /* Fix for additional buttons showing up in date-pickers in webkit-browsers */
