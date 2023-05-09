@@ -36,10 +36,12 @@ module.exports = (theme) => ({
   },
 
   ".bl-input:focus": {
-    "@apply outline-none border-bl-orange-500 ring-1 ring-bl-orange-500": {},
+    "@apply outline-none border-bl-orange-500 ring-1 ring-bl-orange-500 dark:bg-bl-grey-700":
+      {},
   },
   ".bl-input.ng-invalid:focus, .search-filter-bl-input:focus": {
-    "@apply outline-none border-bl-orange-500 ring-1 ring-bl-orange-500": {},
+    "@apply outline-none border-bl-orange-500 ring-1 ring-bl-orange-500 dark:bg-bl-grey-700":
+      {},
   },
 
   ".bl-input.ng-invalid.ng-dirty": {
