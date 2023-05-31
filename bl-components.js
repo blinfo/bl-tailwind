@@ -8,59 +8,6 @@ module.exports = (theme) => ({
     "@apply shadow bg-white md:rounded-md md:p-6 p-4 dark:bg-bl-grey-800": {},
   },
 
-  ".bl-input": {
-    "@apply w-full rounded-md text-base text-bl-grey-900 leading-6 bg-white border border-bl-grey-200 px-3 py-2 shadow-sm dark:text-bl-grey-200 dark:bg-bl-grey-700 dark:border-bl-grey-600":
-      {},
-  },
-  "@screen sm": {
-    ".bl-input": {
-      "@apply text-sm": {},
-    },
-  },
-
-  ".search-filter-bl-input": {
-    "@apply w-full text-base text-bl-grey-900 border border-bl-grey-200 shadow-sm dark:text-bl-grey-200 dark:border-bl-grey-600 dark:bg-bl-grey-700":
-      {},
-  },
-
-  ".bl-input::placeholder": {
-    "@apply text-bl-grey-500 dark:text-bl-grey-200": {},
-  },
-
-  // ".bl-input.ng-invalid": {
-  //   borderColor: theme("colors.bl-grey-200"),
-  // },
-
-  ".bl-input.ng-invalid": {
-    "@apply border-bl-grey-200 dark:border-bl-grey-600": {},
-  },
-
-  ".bl-input:focus": {
-    "@apply outline-none border-bl-orange-500 ring-1 ring-bl-orange-500 dark:bg-bl-grey-700":
-      {},
-  },
-  ".bl-input.ng-invalid:focus, .search-filter-bl-input:focus": {
-    "@apply outline-none border-bl-orange-500 ring-1 ring-bl-orange-500 dark:bg-bl-grey-700":
-      {},
-  },
-
-  ".bl-input.ng-invalid.ng-dirty": {
-    "@apply outline-none border-bl-red-500": {},
-  },
-
-  ".bl-input.ng-invalid.ng-dirty:focus": {
-    "@apply outline-none border-bl-red-500 ring-1 ring-bl-red-500": {},
-  },
-
-  ".bl-input-error-icon": {
-    bottom: "0.5em",
-    right: "1em",
-    zIndex: "100",
-  },
-  ".bl-input-error-multi-icon": {
-    right: "2em !important",
-  },
-
   ".form-radio": {
     "@apply border border-bl-grey-300 mr-3 dark:border-bl-grey-600": {},
   },
