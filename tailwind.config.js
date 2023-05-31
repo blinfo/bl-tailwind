@@ -136,10 +136,10 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
-    plugin(function ({ addBase, addComponents, addInput, theme }) {
+    plugin(function ({ addBase, addComponents, addUtilities, theme }) {
       addBase(baseStyle(theme));
       addComponents(componentsStyle(theme));
-      addInput(inputStyle(theme));
+      addUtilities(inputStyle(theme));
     })
   ],
 }
