@@ -168,7 +168,7 @@ module.exports = (theme) => ({
     "@apply outline-none ring-2 ring-offset-2 ring-bl-red-500": {},
   },
   ".bl-button-secondary-blue": {
-    "@apply bg-bl-blue-500 text-white": {},
+    "@apply bg-bl-blue-500 text-white dark:text-bl-grey-100": {},
   },
   ".bl-button-secondary-blue:hover": {
     "@apply bg-bl-blue-800": {},
@@ -177,7 +177,7 @@ module.exports = (theme) => ({
     "@apply outline-none ring-2 ring-offset-2 ring-bl-blue-500": {},
   },
   ".bl-button-warning": {
-    "@apply bg-bl-red-500 text-white": {},
+    "@apply bg-bl-red-500 text-white dark:text-bl-grey-100": {},
   },
   ".bl-button-warning:hover": {
     "@apply bg-bl-red-600": {},
