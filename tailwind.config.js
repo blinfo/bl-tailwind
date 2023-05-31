@@ -1,6 +1,7 @@
 const plugin = require('tailwindcss/plugin')
 const baseStyle = require('./bl-base');
 const componentsStyle = require('./bl-components');
+const inputStyle = require('./bl-input');
 
 module.exports = {
   darkMode: "class", 
@@ -134,9 +135,10 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
-    plugin(function ({ addBase, addComponents, theme }) {
+    plugin(function ({ addBase, addComponents, addInput, theme }) {
       addBase(baseStyle(theme));
       addComponents(componentsStyle(theme));
+      addInput(inputStyle(theme));
     })
   ],
 }
